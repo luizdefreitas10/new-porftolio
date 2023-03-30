@@ -1,9 +1,15 @@
-import aboutMeText from "@/mocks/About";
+import { aboutMeFirstText, aboutMeSecondText, aboutMeThirdText } from '../../mocks/About'
+import {
+  StyledText,
+  Container
+} from '../../styles/components/AboutMe/styles'
 
 export default function AboutMe() {
   return (
-    <>
-      <p>{aboutMeText}</p>
-    </>
+    <Container>
+      <StyledText>{aboutMeFirstText}</StyledText>
+      <StyledText>{aboutMeSecondText}</StyledText>
+      <StyledText>{aboutMeThirdText}</StyledText>
+    </Container>
   );
 }

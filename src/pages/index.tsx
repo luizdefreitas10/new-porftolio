@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import Header from '../components/Header'
 import About from '../components/About'
 import AboutMe from '@/components/AboutMe'
-
+import Box from '../styles/components/AOSWrapper/styles'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -18,9 +18,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header />
-        <About />
-        <AboutMe />
+        <div data-aos='fade-up' data-aos-duration='3000'>
+          <Header  />
+        </div>
+        <div data-aos='fade-right' data-aos-duration='3000'>
+          <About />
+        </div>
+        <div data-aos='fade-left' data-aos-duration='3000'>
+          <AboutMe  />
+        </div>
       </main>
     </>
   )

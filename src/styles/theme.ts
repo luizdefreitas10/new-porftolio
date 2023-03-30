@@ -32,4 +32,8 @@ export default {
   productAccent3: "#9212B9",
   productAccent4: "#A901DC",
   productError1: "#B53838",
+  editorBackground: "#1a1b26",
+  editorStrings: "#9ece6a",
+  editorKeywords: "#f7768e",
+  editorTerminal: "#c0caf5",
 };

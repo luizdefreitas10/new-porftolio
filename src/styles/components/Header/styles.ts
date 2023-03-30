@@ -14,7 +14,7 @@ export const HeaderContainer = styled.div`
 `;
 
 export const Navigation = styled.a`
-  color: ${(props) => props.theme.productLight1};
+  color: ${(props) => props.theme.editorTerminal};
 
     &:hover {
     color: white;
