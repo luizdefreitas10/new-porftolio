@@ -11,17 +11,22 @@ export const Container = styled.div`
   justify-content: space-around;
 `;
 
-export const StyledImg = styled.img`
+export const StyledImg = styled(Image)`
   border-radius: 5px;
   z-index: 3;
+  /* box-shadow: -2px 3px 3px ${(props) => props.theme.editorKeywords}; */
+  box-shadow: -2px 2px 2px black;
 `;
 
 export const ContentContainer = styled.div`
   color: ${(props) => props.theme.productLight1};
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 
   & p {
-    color: ${(props) => props.theme.editorStrings};;
+    color: ${(props) => props.theme.editorOrange2};;
     width: 80%;
     text-align: justify;
     z-index: 3;
@@ -37,11 +42,11 @@ export const ContentContainer = styled.div`
       content: '';
       position: absolute;
       top: 50%;
-      left: 10%;
-      right: 0;
+      left: 3%;
+      right: 20%;
       height: 4px;
       border-radius: 5px;
-      background-color: ${(props) => props.theme.productLight1};
+      background-color: ${(props) => props.theme.productLight5};
     }
   }
 `;
@@ -50,9 +55,10 @@ export const Navigation = styled.a`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: ${(props) => props.theme.editorBlueSky};
 
   &:hover {
-    color: ${(props) => props.theme.editorStrings};
+    color: ${(props) => props.theme.editorTerminalBlue};
   }
 `;
 
@@ -85,10 +91,10 @@ export const YellowFlyingLogo = styled(Image)`
 
   animation: float 5s ease-in-out infinite;
   position: absolute;
-  right: 29%;
+  right: 39%;
   top: 50%;
   opacity: 1;
-  z-index: 3;
+  z-index: 2;
 
 `;
 
@@ -108,7 +114,28 @@ export const FlyingLogo = styled(Image)`
   animation: float 5s ease-in-out infinite;
   position: absolute;
   /* right: 29%; */
-  top: 28%;
+  top: -15%;
   opacity: 1;
   z-index: 1;
+`;
+
+export const BlueSkyFlyingLogo = styled(Image)`
+  @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(150px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+  animation: float 5s ease-in-out infinite;
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  opacity: 1;
+  z-index: 2;
 `;

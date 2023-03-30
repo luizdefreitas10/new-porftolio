@@ -6,10 +6,15 @@ import {
 
 export default function AboutMe() {
   return (
-    <Container>
-      <StyledText>{aboutMeFirstText}</StyledText>
-      <StyledText>{aboutMeSecondText}</StyledText>
-      <StyledText>{aboutMeThirdText}</StyledText>
-    </Container>
+    <>
+      <Container>
+        <StyledText>{aboutMeFirstText}</StyledText>
+        <StyledText>{aboutMeSecondText}</StyledText>
+        <StyledText>{aboutMeThirdText}</StyledText>
+      </Container>
+      {/* <LinksContainer>
+
+      </LinksContainer> */}
+    </>
   );
 }

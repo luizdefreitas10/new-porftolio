@@ -13,6 +13,6 @@ export const aboutMeSecondText = `
 
 Atualmente, estou concluindo o módulo back-end. Pude estudar e estabelecer conceitos sobre Docker, MySQL, NodeJS, ORMs(object relational mapping) e autenticações, arquitetura de software, camadas Model, Service e Controller, TypeScript, programação orientada a objetos, princípios SOLID e MongoDB. Com a ajuda do framework Express, tornou-se rotineira a construção de aplicações back-end e construção de APIs RESTFULL, middlewares, e testes de integração. Também pude utilizar o Sequelize para abstrair a lógica das minhas queries SQL, facilitando na compreensão e leitura do código.`
 
-export const homeText = `Desenvolvedor full stack entusiasta e comprometido em criar soluções inovadoras e eficientes. Sou apaixonado por enfrentar desafios e acredito que a tecnologia é uma ferramenta poderosa para melhorar a vida das pessoas. Estou constantemente buscando oportunidades para aplicar e expandir meu conhecimento em projetos significativos e colaborações profissionais.`
+export const homeText = `< Desenvolvedor web full stack entusiasta e comprometido em criar soluções inovadoras e eficientes. Apaixonado por enfrentar desafios e acredito que a tecnologia é uma ferramenta poderosa para melhorar a vida das pessoas. />`
 
 export default aboutMeFirstText

@@ -33,7 +33,12 @@ export default {
   productAccent4: "#A901DC",
   productError1: "#B53838",
   editorBackground: "#1a1b26",
+  editorStorm: "#24283b",
+  editorBlack: "#414868",
   editorStrings: "#9ece6a",
   editorKeywords: "#f7768e",
-  editorTerminal: "#c0caf5",
+  editorTerminalBlue: "#c0caf5",
+  editorBlueSky: "#7aa2f7",
+  editorOrange1: "#ff9e64",
+  editorOrange2: "#e0af68",
 };

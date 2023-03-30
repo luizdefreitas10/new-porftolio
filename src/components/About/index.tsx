@@ -10,13 +10,15 @@ import {
   NavigationContainer,
   NavContainer,
   YellowFlyingLogo,
-  FlyingLogo
+  FlyingLogo,
+  BlueSkyFlyingLogo,
 } from '../../styles/components/About/styles'
 import gitHubIcon from '../../assets/svgs/iconmonstr-github-1.svg'
 import linkedinIcon from '../../assets/svgs/iconmonstr-linkedin-3.svg'
 import portfolioIcon from '../../assets/svgs/iconmonstr-briefcase-13.svg'
-import yellowFlyingLogo from '../../assets/svgs/styled-svg.svg'
-import redFlyingLogo from '../../assets/svgs/styled-red-svg.svg'
+import yellowFlyingLogo from '../../assets/svgs/tag-orange2.svg'
+import redFlyingLogo from '../../assets/svgs/tag-red.svg'
+import blueSkyFlyingLogo from '../../assets/svgs/tag-bluesky.svg'
 
 
 export default function About() {
@@ -48,7 +50,9 @@ export default function About() {
       </ContentContainer>
       <FlyingLogo src={redFlyingLogo} alt={'flying-logo'} width={50} height={50} />
       <YellowFlyingLogo src={yellowFlyingLogo} alt={'flying-logo'} width={50} height={50} />
-      <StyledImg src='https://i.pinimg.com/originals/fa/12/29/fa1229e368827a0f56df5b856e42d00a.jpg' alt={'hacker coding'} width={350} height={350} />
+      <BlueSkyFlyingLogo src={blueSkyFlyingLogo} alt={'flying-logo'} width={50} height={50} />
+      {/* <Image src='/src/assets/imgs/hacker.jpeg' alt={'hacker coding'} width={350} height={350} /> */}
+      <StyledImg src='/luiz-sameiro-copy.jpeg' alt={'coding'} width={350} height={350} priority/>
     </Container>
   );
 }

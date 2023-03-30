@@ -1,39 +1,47 @@
 /** @type {import('next').NextConfig} */
-
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
 const withTM = require('next-transpile-modules')(['styled-components']);
 
-module.exports = withBundleAnalyzer(
-  withTM({
+module.exports = withTM({
     reactStrictMode: true,
+    swcMinify: true,
+    typescript: {
+      ignoreBuildErrors: true,
+    },
     images: {
-      domains: [], // Adicione quaisquer domínios necessários para suas imagens aqui
+      domains: ['www.facebook.com', 'localhost'],
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "**",
+        },
+      ],
     },
-    webpack: (config, { isServer, defaultLoaders }) => {
-      // if (isServer) {
-      //   require('./scripts/generate-sitemap');
-      // }
-
-      config.module.rules.push({
-        test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|jpeg|gif)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-              publicPath: '/_next/static/',
-              outputPath: 'static/',
-              name: '[name].[ext]',
-            },
-          },
-        ],
-      });
-
-      return config;
-    },
-  })
-);
+  });
 
 
+// /** @type {import('next').NextConfig} */
+
+// const withPWA = require("next-pwa")({
+//   dest: "public",
+//   register: true,
+//   skipWaiting: true,
+//   disable: process.env.NODE_ENV === "development",
+// });
+
+// const nextConfig = {
+//   reactStrictMode: true,
+//   swcMinify: true,
+//   typescript: {
+//     ignoreBuildErrors: true,
+//   },
+//   images: {
+//     remotePatterns: [
+//       {
+//         protocol: "https",
+//         hostname: "**",
+//       },
+//     ],
+//   },
+// };
+
+// module.exports = withPWA(nextConfig);

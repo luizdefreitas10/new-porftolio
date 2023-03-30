@@ -3,7 +3,7 @@ import Image from "next/image";
 
 
 export const StyledText = styled.p`
-  color: ${(props) => props.theme.editorStrings};
+  color: ${(props) => props.theme.editorOrange2};
 `;
 
 export const Container = styled.div`

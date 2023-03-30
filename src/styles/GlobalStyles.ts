@@ -10,8 +10,9 @@ export default createGlobalStyle`
         font-family: "Raleway", sans-serif;
         /* background: ${(props) => props.theme.productDark4}; */
         /* background: ${(props) => props.theme.productDark4}; */
-        background: ${(props) => props.theme.productDark2};
-        /* background: ${(props) => props.theme.editorBackground}; */
+        /* background: ${(props) => props.theme.productDark2}; */
+        background: ${(props) => props.theme.editorBackground};
+        /* background: ${(props) => props.theme.editorStorm}; */
         /* font-family: ${(props) => props.theme.font.primary};
         color: ${(props) => props.theme.productLight1}; */
     }
