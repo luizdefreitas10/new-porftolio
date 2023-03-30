@@ -13,3 +13,6 @@ export const Container = styled.div`
  margin-top: 2rem;
 `;
 
+export const LinksContainer = styled.div`
+  
+`;

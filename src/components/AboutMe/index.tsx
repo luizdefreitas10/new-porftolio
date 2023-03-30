@@ -1,7 +1,8 @@
 import { aboutMeFirstText, aboutMeSecondText, aboutMeThirdText } from '../../mocks/About'
 import {
   StyledText,
-  Container
+  Container,
+  LinksContainer
 } from '../../styles/components/AboutMe/styles'
 
 export default function AboutMe() {
@@ -12,9 +13,9 @@ export default function AboutMe() {
         <StyledText>{aboutMeSecondText}</StyledText>
         <StyledText>{aboutMeThirdText}</StyledText>
       </Container>
-      {/* <LinksContainer>
-
-      </LinksContainer> */}
+      <LinksContainer>
+        <a>aqui o link</a>
+      </LinksContainer>
     </>
   );
 }
