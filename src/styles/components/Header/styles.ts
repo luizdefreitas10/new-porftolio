@@ -7,8 +7,8 @@ export const Container = styled.div`
   align-items: center;
   height: 3.3rem;
   /* background: ${(props) => props.theme.editorStorm}; */
-  /* position: fixed; */
   z-index: 3;
+  width: 100%;
 `;
 
 export const HeaderContainer = styled.div`
@@ -31,5 +31,15 @@ export const Navigation = styled.a`
 
 `;
 
+export const FixedContainer = styled.div`
+  margin-top: -6rem;
+  width: 100%;
+
+  position: fixed;
+  z-index: 6;
+`;
 
 
+export const Main = styled.main`
+  padding-top: 6rem;
+`;

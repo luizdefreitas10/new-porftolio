@@ -4,8 +4,13 @@ import { Inter } from 'next/font/google'
 import Header from '../components/Header'
 import About from '../components/About'
 import AboutMe from '@/components/AboutMe'
-import Box from '../styles/components/AOSWrapper/styles'
-
+import Technologies from '../components/Technologies'
+import {
+  FixedContainer,
+  Main
+} from '../styles/components/Header/styles'
+import {ProjectContainer } from '../styles/components/Projects/styles'
+import Projects from '@/components/Projects'
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -17,17 +22,23 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <div data-aos='fade-up' data-aos-duration='3000'>
+      <Main>
+        <FixedContainer data-aos='fade-up' data-aos-duration='2000'>
           <Header  />
-        </div>
-        <div data-aos='fade-right' data-aos-duration='3000'>
+        </FixedContainer>
+        <div data-aos='fade-right' data-aos-duration='2000'>
           <About />
         </div>
-        <div data-aos='fade-left' data-aos-duration='3000'>
+        <div data-aos='fade-left' data-aos-duration='2000'>
           <AboutMe  />
         </div>
-      </main>
+        <div data-aos='fade-right' data-aos-duration='2000'>
+          <Technologies />
+        </div>
+        <ProjectContainer data-aos='fade-left' data-aos-duration='2000'>
+          <Projects />
+        </ProjectContainer>
+      </Main>
     </>
   )
 }

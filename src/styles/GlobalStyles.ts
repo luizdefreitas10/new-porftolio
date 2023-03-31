@@ -35,8 +35,8 @@ export default createGlobalStyle`
 
     body{
         -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
         /* background: ${({ theme }) => theme.productBase1}; */
-        
 
         /* height: 100vh; */
     }
@@ -70,30 +70,28 @@ export default createGlobalStyle`
     } */
 
     /* add custom scrollbar in global project 👇🏼👇🏼👻 */
-    /* ::-webkit-scrollbar {
+    ::-webkit-scrollbar {
       width: 5px;
     }
 
     ::-webkit-scrollbar-track {
-      background: #0E1020;
+      background: ${(props) => props.theme.editorBackground};
     }
 
     ::-webkit-scrollbar-thumb {
-      background: linear-gradient(178.8deg, ${(props) =>
-        props.theme.productAccent4} 0%, ${(props) =>
-  props.theme.productAccent1} 100%);
+      background: ${(props) => props.theme.editorBlueSky};
       border-radius: 20px;
-    } */
+    }
 
     /* Cor do Texto selecionado 👇🏼👇🏼👻 */
     ::-moz-selection {
-      color: white;
-      background: ${(props) => props.theme.productAccent4};
+      color: ${(props) => props.theme.editorOrange1};
+      background: ${(props) => props.theme.editorBackground};
     }
 
     ::selection {
-      color: white;
-      background: ${(props) => props.theme.productAccent4};
+      color:${(props) => props.theme.editorOrange1};
+      background: ${(props) => props.theme.editorBlack};
     }
 
     @supports (font: -apple-system-body) and (-webkit-appearance: none) { img[loading="lazy"] { clip-path: inset(0.6px) } }

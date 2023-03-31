@@ -9,6 +9,10 @@ export const Container = styled.div`
   margin-top: 30px;
   align-items: center;
   justify-content: space-around;
+
+  & li {
+    color: ${(props) => props.theme.editorStrings}
+  }
 `;
 
 export const StyledImg = styled(Image)`
@@ -49,6 +53,8 @@ export const ContentContainer = styled.div`
       background-color: ${(props) => props.theme.productLight5};
     }
   }
+
+ 
 `;
 
 export const Navigation = styled.a`

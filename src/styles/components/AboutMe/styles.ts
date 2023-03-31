@@ -11,8 +11,33 @@ export const Container = styled.div`
  width: 80%;
  margin: 0 auto;
  margin-top: 2rem;
+
+ & p {
+  margin-bottom: 10px;
+ }
+
+ & ul {
+  margin-bottom: 10px;
+ }
+
+ & li {
+  color: ${(props) => props.theme.editorStrings}
+ }
+
 `;
 
 export const LinksContainer = styled.div`
-  
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+
+  & a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+    margin-right: 10px;
+    color: ${(props) => props.theme.editorBlueSky};
+  }
 `;
