@@ -11,6 +11,7 @@ import {
 } from '../styles/components/Header/styles'
 import {ProjectContainer } from '../styles/components/Projects/styles'
 import Projects from '@/components/Projects'
+import Contact from '@/components/Contact'
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -38,6 +39,9 @@ export default function Home() {
         <ProjectContainer data-aos='fade-left' data-aos-duration='2000'>
           <Projects />
         </ProjectContainer>
+        <div data-aos='fade-right' data-aos-duration='2000'>
+          <Contact />
+        </div>
       </Main>
     </>
   )

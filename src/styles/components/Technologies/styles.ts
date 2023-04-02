@@ -12,7 +12,7 @@ export const Container = styled.div`
 
 export const StyledH1 = styled.h1`
   width: 80%;
-  font-size: medium;
+  font-size: 1.5rem;
   color: ${(props) => props.theme.editorKeywords};
   margin: 0 auto;
 `;

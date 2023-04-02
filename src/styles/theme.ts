@@ -39,6 +39,7 @@ export default {
   editorKeywords: "#f7768e",
   editorTerminalBlue: "#c0caf5",
   editorBlueSky: "#7aa2f7",
+  editorLittleSky: "#b4f9f8",
   editorOrange1: "#ff9e64",
   editorOrange2: "#e0af68",
 };

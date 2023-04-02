@@ -1,4 +1,4 @@
-import {Card, Container, CardContainer, StyledH1} from '../../styles/components/Projects/styles'
+import {Card, Container, CardContainer, StyledH1, Button} from '../../styles/components/Projects/styles'
 import { mockData } from '@/mocks/Projects';
 import Image from 'next/image';
 
@@ -16,7 +16,7 @@ export default function Projects () {
                 return <li>{stack}</li>
               }) }
             </ul>
-            <button>Veja aqui</button>
+            <Button>Veja aqui</Button>
           </Card>
         }) }
       </CardContainer>
