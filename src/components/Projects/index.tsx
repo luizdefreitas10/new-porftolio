@@ -8,12 +8,12 @@ export default function Projects () {
       <StyledH1>Veja alguns dos meus projetos:</StyledH1>
       <CardContainer>
         { mockData.map((project) => {
-          return <Card>
+          return <Card key={project.id}>
             <p>{project.name}</p>
             <Image src={project.src} alt={project.name} width={200} height={200}/>
             <ul>
               { project.stacks.map((stack) => {
-                return <li>{stack}</li>
+                return <li key={stack}>{stack}</li>
               }) }
             </ul>
             <Button>Veja aqui</Button>

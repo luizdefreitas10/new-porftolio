@@ -41,4 +41,10 @@ export const Button = styled.button`
   border-radius: 5px;
   border: none;
   width: 4rem;
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: ${(props) => props.theme.editorTerminalBlue};
+    color: ${(props) => props.theme.editorBlack};
+  }
 `;

@@ -13,6 +13,18 @@ export const Container = styled.div`
   & li {
     color: ${(props) => props.theme.editorStrings}
   }
+
+  @media (${(props) => props.theme.breaks.customBreak}) {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+
+    & img {
+      margin: 1rem 0;
+
+    }
+
+  }
 `;
 
 export const StyledImg = styled(Image)`
@@ -54,7 +66,11 @@ export const ContentContainer = styled.div`
     }
   }
 
- 
+  @media (${(props) => props.theme.breaks.customBreak}) {
+    align-items:  center;
+    justify-content: center;
+  }
+
 `;
 
 export const Navigation = styled.a`

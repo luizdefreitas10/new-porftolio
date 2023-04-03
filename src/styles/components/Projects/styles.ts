@@ -11,6 +11,7 @@ export const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  
   height: 19rem;
   width: 30%;
   background-color: ${(props) => props.theme.editorStorm};
@@ -32,6 +33,7 @@ export const Card = styled.div`
   & li {
     color: ${(props) => props.theme.editorOrange1};
     background-color: ${(props) => props.theme.editorStorm};
+    flex-wrap: wrap;
   }
 `;
 

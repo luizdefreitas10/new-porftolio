@@ -5,6 +5,7 @@ export default {
     tablet: "768px <= width <= 1024px",
     desktop: "min-width: 1024px",
     // xs: "min-width: 0px",
+    customBreak: "max-width: 890px",
     sm: "max-width: 576px",
     md: "max-width: 768px",
     lg: "max-width: 992px",
@@ -43,3 +44,4 @@ export default {
   editorOrange1: "#ff9e64",
   editorOrange2: "#e0af68",
 };
+
