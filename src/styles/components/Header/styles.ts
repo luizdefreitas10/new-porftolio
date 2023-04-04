@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 
 export const Container = styled.div`
   padding: 3rem;
@@ -9,6 +10,10 @@ export const Container = styled.div`
   background: ${(props) => props.theme.editorBackground};
   z-index: 3;
   width: 100%;
+
+  @media (${(props) => props.theme.breaks.sm}) {
+    justify-content: space-between;
+  }
 `;
 
 export const HeaderContainer = styled.div`
@@ -42,4 +47,8 @@ export const FixedContainer = styled.div`
 
 export const Main = styled.main`
   padding-top: 6rem;
+`;
+
+export const StyledSvg = styled(Image)`
+  cursor: pointer;
 `;

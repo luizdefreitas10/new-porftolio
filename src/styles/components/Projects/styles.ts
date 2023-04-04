@@ -17,6 +17,7 @@ export const Card = styled.div`
   background-color: ${(props) => props.theme.editorStorm};
   gap: 1rem;
   border-radius: 10px;
+  min-width: 12rem;
 
   & img {
     width: 100px;

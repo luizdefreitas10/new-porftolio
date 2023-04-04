@@ -2,15 +2,20 @@ import {
   Navigation,
   HeaderContainer,
   Container,
+  StyledSvg
 } from "../../styles/components/Header/styles";
 import portfolioSVG from "../../assets/svgs/portfolio-my-profile-browser-svgrepo-com.svg";
 import Image from "next/image";
 import { Link, Element } from "react-scroll";
+import { useRouter } from "next/router";
 
 export default function Header() {
+
+  const router = useRouter();
+
   return (
     <Container>
-      <Image src={portfolioSVG} alt={"portfolioSVG"} height={50} width={50} />
+      <StyledSvg src={portfolioSVG} alt={"portfolioSVG"} height={50} width={50} onClick={() => router.push('/')}/>
       <HeaderContainer>
         <Navigation href="#inicio">Início</Navigation>
 
