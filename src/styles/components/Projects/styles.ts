@@ -11,7 +11,7 @@ export const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  
+
   height: 19rem;
   width: 30%;
   background-color: ${(props) => props.theme.editorStorm};
@@ -25,6 +25,8 @@ export const Card = styled.div`
   }
 
   & p {
+    font-size: 0.9rem;
+    text-align: center;
     margin-top: 13px;
     background-color: ${(props) => props.theme.editorStorm};
     color: ${(props) => props.theme.editorBlueSky}
@@ -34,6 +36,7 @@ export const Card = styled.div`
     color: ${(props) => props.theme.editorOrange1};
     background-color: ${(props) => props.theme.editorStorm};
     flex-wrap: wrap;
+    font-size: 0.8rem;
   }
 `;
 

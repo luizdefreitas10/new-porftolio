@@ -126,7 +126,12 @@ export const YellowFlyingLogo = styled(Image)`
   right: 39%;
   top: 50%;
   opacity: 1;
-  z-index: 2;
+
+  @media (${(props) => props.theme.breaks.customBreak}) {
+    /* display: none; */
+    right: 89%;
+  }
+  /* z-index: 1; */
 
 `;
 
@@ -148,7 +153,11 @@ export const FlyingLogo = styled(Image)`
   /* right: 29%; */
   top: -15%;
   opacity: 1;
-  z-index: 1;
+
+  @media (${(props) => props.theme.breaks.customBreak}) {
+    display: none;
+  }
+  /* z-index: 1; */
 `;
 
 export const BlueSkyFlyingLogo = styled(Image)`
@@ -169,5 +178,10 @@ export const BlueSkyFlyingLogo = styled(Image)`
   left: 4%;
   top: 50%;
   opacity: 1;
-  z-index: 2;
+
+  @media (${(props) => props.theme.breaks.customBreak}) {
+    /* display: none; */
+    left: 89%;
+  }
+  /* z-index: 1; */
 `;

@@ -12,7 +12,7 @@ export const InputField = styled.input`
   color: ${(props) => props.theme.editorOrange2};
   background-color: ${(props) => props.theme.editorStorm};
   /* border-bottom: 1px solid #ccc; */
-  font-size: 16px;
+  font-size: 0.8rem;
   width: 100%;
   padding: 0.8rem 0;
   padding-left: 0.8rem;
@@ -32,7 +32,7 @@ export const InputLabel = styled.label`
   position: absolute;
   left: 0;
   top: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: ${(props) => props.theme.editorTerminalBlue};
   background-color: transparent;
   transition: all 0.2s ease;

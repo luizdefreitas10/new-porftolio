@@ -25,6 +25,7 @@ export const TextArea = styled.textarea`
   color: ${(props) => props.theme.editorOrange2};
   padding: 10px;
   border-radius: 5px;
+  border: none;
   background-color: ${(props) => props.theme.editorStorm};
   height: 5rem;
   margin-top: 1rem;
@@ -43,6 +44,7 @@ export const Button = styled.button`
   border: none;
   width: 4rem;
   margin-top: 1rem;
+  font-size: 0.8rem;
 
   &:hover {
     background-color: ${(props) => props.theme.editorTerminalBlue};

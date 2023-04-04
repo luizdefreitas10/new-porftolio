@@ -34,7 +34,7 @@ export const Navigation = styled.a`
 export const FixedContainer = styled.div`
   margin-top: -6rem;
   width: 100%;
-  background-color: white;
+  /* background-color: white; */
   position: fixed;
   z-index: 6;
 `;
