@@ -18,6 +18,7 @@ export const Container = styled.div`
   }
 
   & span {
+    margin-left: 5px;
     background-color: ${(props) => props.theme.editorStorm};
     color: ${(props) => props.theme.editorOrange2}
   }

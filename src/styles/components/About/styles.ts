@@ -1,9 +1,17 @@
 import styled from "styled-components";
 import Image from "next/image";
 
+export const MainContainer = styled.div`
+  width: 100%;
+  height: rem;
+  background-color: ${(props) => props.theme.editorBlack};
+  padding: 10px 0;
+`;
+
 export const Container = styled.div`
+border-radius: 5px;
   display: flex;
-  /* background-color: ${(props) => props.theme.productLight1}; */
+  /* background-color: ${(props) => props.theme.editorStorm}; */
   width: 80%;
   margin: 0 auto;
   margin-top: 30px;
@@ -83,6 +91,8 @@ export const Navigation = styled.a`
     color: ${(props) => props.theme.editorTerminalBlue};
   }
 `;
+
+
 
 export const NavigationContainer = styled.div`
   display: flex;

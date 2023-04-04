@@ -1,7 +1,7 @@
-import aboutMeText from '../../mocks/About'
-import { homeText } from '../../mocks/About/'
-import Image from 'next/image';
-import hackerImg from '../../assets/imgs/hacker.jpeg'
+import aboutMeText from "../../mocks/About";
+import { homeText } from "../../mocks/About/";
+import Image from "next/image";
+import hackerImg from "../../assets/imgs/hacker.jpeg";
 import {
   Container,
   StyledImg,
@@ -12,47 +12,94 @@ import {
   YellowFlyingLogo,
   FlyingLogo,
   BlueSkyFlyingLogo,
-} from '../../styles/components/About/styles'
-import gitHubIcon from '../../assets/svgs/iconmonstr-github-1.svg'
-import linkedinIcon from '../../assets/svgs/iconmonstr-linkedin-3.svg'
-import portfolioIcon from '../../assets/svgs/iconmonstr-briefcase-13.svg'
-import yellowFlyingLogo from '../../assets/svgs/tag-orange2.svg'
-import redFlyingLogo from '../../assets/svgs/tag-red.svg'
-import blueSkyFlyingLogo from '../../assets/svgs/tag-bluesky.svg'
-
+  MainContainer
+} from "../../styles/components/About/styles";
+import gitHubIcon from "../../assets/svgs/github-white.svg";
+import linkedinIcon from "../../assets/svgs/linkedin.svg";
+import portfolioIcon from "../../assets/svgs/iconmonstr-briefcase-13.svg";
+import yellowFlyingLogo from "../../assets/svgs/tag-orange2.svg";
+import redFlyingLogo from "../../assets/svgs/tag-red.svg";
+import blueSkyFlyingLogo from "../../assets/svgs/tag-bluesky.svg";
 
 export default function About() {
   return (
-    <Container>
+    // <MainContainer>
+    <Container id="inicio">
       <ContentContainer>
         <h1>Olá, eu sou</h1>
         <span>Luiz de Freitas</span>
         <p>{homeText}</p>
         <NavContainer>
           <NavigationContainer>
-            <Navigation>
-              <Image src={gitHubIcon} alt={'github icon'} width={30} height={30}/>
+            <Navigation
+              href="https://github.com/luizdefreitas10"
+              target="_blank" rel="noopener noreferrer"
+            >
+              <Image
+                src={gitHubIcon}
+                alt={"github icon"}
+                width={30}
+                height={30}
+              />
               GitHub
             </Navigation>
           </NavigationContainer>
           <NavigationContainer>
-            <Navigation>
-              <Image src={linkedinIcon} alt={'linkedin icon'} width={30} height={30} />
-              LinkedIn</Navigation>
+            <Navigation
+              href="https://www.linkedin.com/in/luiz-de-freitas-lima-neto/"
+              target="_blank" rel="noopener noreferrer"
+            >
+              <Image
+                src={linkedinIcon}
+                alt={"linkedin icon"}
+                width={30}
+                height={30}
+              />
+              LinkedIn
+            </Navigation>
           </NavigationContainer>
           <NavigationContainer>
-            <Navigation>
-              <Image src={portfolioIcon} alt={'portfolio icon'} width={30} height={30} />
+            <Navigation href="https://github.com/luizdefreitas10/       new-porftolio"
+              target="_blank" rel="noopener noreferrer"
+            >
+              <Image
+                src='/white-portfolio.png'
+                alt={"portfolio icon"}
+                width={30}
+                height={30}
+              />
               Portfolio
             </Navigation>
           </NavigationContainer>
         </NavContainer>
       </ContentContainer>
-      <FlyingLogo src={redFlyingLogo} alt={'flying-logo'} width={50} height={50} />
-      <YellowFlyingLogo src={yellowFlyingLogo} alt={'flying-logo'} width={50} height={50} />
-      <BlueSkyFlyingLogo src={blueSkyFlyingLogo} alt={'flying-logo'} width={50} height={50} />
+      <FlyingLogo
+        src={redFlyingLogo}
+        alt={"flying-logo"}
+        width={50}
+        height={50}
+      />
+      <YellowFlyingLogo
+        src={yellowFlyingLogo}
+        alt={"flying-logo"}
+        width={50}
+        height={50}
+      />
+      <BlueSkyFlyingLogo
+        src={blueSkyFlyingLogo}
+        alt={"flying-logo"}
+        width={50}
+        height={50}
+      />
       {/* <Image src='/src/assets/imgs/hacker.jpeg' alt={'hacker coding'} width={350} height={350} /> */}
-      <StyledImg src='/luiz-sameiro-copy.jpeg' alt={'coding'} width={350} height={350} priority/>
+      <StyledImg
+        src="/luiz-sameiro-copy.jpeg"
+        alt={"coding"}
+        width={350}
+        height={350}
+        priority
+      />
     </Container>
+    // </MainContainer>
   );
 }

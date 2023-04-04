@@ -15,7 +15,7 @@ const listItems = [
 
 export default function AboutMe() {
   return (
-    <>
+    <div id='sobre'>
       <Container>
         <StyledText>{aboutMeFirstText}</StyledText>
         { " " }
@@ -40,6 +40,6 @@ export default function AboutMe() {
           Email
         </a>
       </LinksContainer>
-    </>
+    </div>
   );
 }

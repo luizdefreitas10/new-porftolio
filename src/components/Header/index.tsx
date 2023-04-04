@@ -12,10 +12,10 @@ export default function Header() {
   <Container>
     <Image src={portfolioSVG} alt={"portfolioSVG"} height={50} width={50}/>
     <HeaderContainer>
-      <Navigation>Início</Navigation>
-      <Navigation>Sobre mim</Navigation>
-      <Navigation>Projetos</Navigation>
-      <Navigation>Contato</Navigation>
+      <Navigation href='#inicio'>Início</Navigation>
+      <Navigation href='#sobre'>Sobre mim</Navigation>
+      <Navigation href='#projetos'>Projetos</Navigation>
+      <Navigation href='#contato'>Contato</Navigation>
     </HeaderContainer>
   </Container>
   );

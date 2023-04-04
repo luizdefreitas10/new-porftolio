@@ -7,7 +7,7 @@ export default function Contact () {
   const [message, setMessage] = useState('')
 
   return (
-    <Container>
+    <Container id="contato">
       <StyledH1>Entre em contato:</StyledH1>
       <Form>
         <Input
