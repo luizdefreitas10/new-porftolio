@@ -8,6 +8,7 @@ export const Container = styled.div`
   margin: 0 auto;
   gap: 20px;
   justify-content: space-evenly;
+  /* margin-top: 1rem; */
 `;
 
 export const StyledH1 = styled.h1`
@@ -18,5 +19,5 @@ export const StyledH1 = styled.h1`
 `;
 
 export const BigContainer = styled.div`
-  margin-top: 40px;
+  margin-top: 2rem;
 `;

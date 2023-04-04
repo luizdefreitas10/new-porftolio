@@ -35,6 +35,6 @@ export const InputLabel = styled.label`
   font-size: 0.8rem;
   color: ${(props) => props.theme.editorTerminalBlue};
   background-color: transparent;
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
   padding-left: 0.6rem;
 `;

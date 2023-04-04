@@ -76,20 +76,20 @@ export default function About() {
       <FlyingLogo
         src={redFlyingLogo}
         alt={"flying-logo"}
-        width={50}
-        height={50}
+        width={60}
+        height={60}
       />
       <YellowFlyingLogo
         src={yellowFlyingLogo}
         alt={"flying-logo"}
-        width={50}
-        height={50}
+        width={70}
+        height={70}
       />
       <BlueSkyFlyingLogo
         src={blueSkyFlyingLogo}
         alt={"flying-logo"}
-        width={50}
-        height={50}
+        width={70}
+        height={70}
       />
       {/* <Image src='/src/assets/imgs/hacker.jpeg' alt={'hacker coding'} width={350} height={350} /> */}
       <StyledImg

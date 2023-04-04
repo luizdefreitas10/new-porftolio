@@ -3,7 +3,8 @@ import {
   StyledText,
   Container,
   LinksContainer,
-  StyledH1
+  StyledH1,
+  IdContainer
 } from '../../styles/components/AboutMe/styles'
 import emailIcon from '../../assets/svgs/email.svg.svg'
 import CurriculumIcon from '../../assets/svgs/curriculo.svg'
@@ -16,7 +17,7 @@ const listItems = [
 
 export default function AboutMe() {
   return (
-    <div id='sobre'>
+    <IdContainer id='sobre'>
       <Container>
         <StyledH1>Sobre mim: </StyledH1>
         <StyledText>{aboutMeFirstText}</StyledText>
@@ -50,6 +51,6 @@ export default function AboutMe() {
           Email
         </a>
       </LinksContainer>
-    </div>
+    </IdContainer>
   );
 }

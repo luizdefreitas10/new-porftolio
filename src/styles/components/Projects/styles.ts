@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 `;
 
 export const Card = styled.div`

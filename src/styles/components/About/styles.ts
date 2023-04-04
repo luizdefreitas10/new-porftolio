@@ -9,7 +9,7 @@ export const MainContainer = styled.div`
 `;
 
 export const Container = styled.div`
-border-radius: 5px;
+  border-radius: 5px;
   display: flex;
   /* background-color: ${(props) => props.theme.editorStorm}; */
   width: 80%;
@@ -131,7 +131,7 @@ export const YellowFlyingLogo = styled(Image)`
     /* display: none; */
     right: 89%;
   }
-  /* z-index: 1; */
+  z-index: 1;
 
 `;
 
@@ -150,14 +150,14 @@ export const FlyingLogo = styled(Image)`
 
   animation: float 5s ease-in-out infinite;
   position: absolute;
-  /* right: 29%; */
+  right: 42%;
   top: -15%;
   opacity: 1;
 
   @media (${(props) => props.theme.breaks.customBreak}) {
     display: none;
   }
-  /* z-index: 1; */
+  z-index: 1;
 `;
 
 export const BlueSkyFlyingLogo = styled(Image)`
@@ -178,10 +178,10 @@ export const BlueSkyFlyingLogo = styled(Image)`
   left: 4%;
   top: 50%;
   opacity: 1;
+  /* z-index: 5; */
 
   @media (${(props) => props.theme.breaks.customBreak}) {
     /* display: none; */
     left: 89%;
   }
-  /* z-index: 1; */
 `;

@@ -48,3 +48,7 @@ export const StyledH1 = styled.h1`
   color: ${(props) => props.theme.editorKeywords};
   margin-bottom: 1rem;
 `;
+
+export const IdContainer = styled.div`
+
+`;
