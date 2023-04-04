@@ -1,4 +1,4 @@
-import {Card, Container, CardContainer, StyledH1, Button} from '../../styles/components/Projects/styles'
+import {Card, Container, CardContainer, StyledH1, ProjectNavigate} from '../../styles/components/Projects/styles'
 import { mockData } from '@/mocks/Projects';
 import Image from 'next/image';
 
@@ -16,10 +16,17 @@ export default function Projects () {
                 return <li key={stack}>{stack}</li>
               }) }
             </ul>
-            <Button>Veja aqui</Button>
+            <ProjectNavigate
+              href={project.vercel}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Veja aqui
+            </ProjectNavigate>
           </Card>
         }) }
       </CardContainer>
     </Container>
   );
 }
+

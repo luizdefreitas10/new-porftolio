@@ -6,7 +6,7 @@ export const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 3.3rem;
-  /* background: ${(props) => props.theme.editorStorm}; */
+  background: ${(props) => props.theme.editorBackground};
   z-index: 3;
   width: 100%;
 `;

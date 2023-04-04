@@ -2,7 +2,8 @@ import { aboutMeFirstText, aboutMeSecondText, aboutMeThirdText, contentItems } f
 import {
   StyledText,
   Container,
-  LinksContainer
+  LinksContainer,
+  StyledH1
 } from '../../styles/components/AboutMe/styles'
 import emailIcon from '../../assets/svgs/email.svg.svg'
 import CurriculumIcon from '../../assets/svgs/curriculo.svg'
@@ -17,6 +18,7 @@ export default function AboutMe() {
   return (
     <div id='sobre'>
       <Container>
+        <StyledH1>Sobre mim: </StyledH1>
         <StyledText>{aboutMeFirstText}</StyledText>
         { " " }
         <StyledText>{aboutMeSecondText}</StyledText>
@@ -31,11 +33,19 @@ export default function AboutMe() {
         <StyledText>{aboutMeThirdText}</StyledText>
       </Container>
       <LinksContainer>
-        <a>
+        <a
+          href='/curriculo-dev-luiz-2023-att.pdf'
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image src={CurriculumIcon} alt={"icon curriculum"} width={30} height={30} />
           Currículo
         </a>
-        <a>
+        <a
+          href="mailto:luizdefreitas10@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image src={emailIcon} alt={"emailIcon"} width={30} height={30} />
           Email
         </a>

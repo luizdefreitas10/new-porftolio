@@ -6,8 +6,22 @@ import {
 import portfolioSVG from '../../assets/svgs/portfolio-my-profile-browser-svgrepo-com.svg'
 import Image from 'next/image';
 import myImg from '../../assets/imgs/luiz-sameiro-copy.jpg'
+import { useRef } from 'react';
 
 export default function Header() {
+
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const handleAnchorClick = () => {
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest',
+      });
+    }
+  };
+
   return (
   <Container>
     <Image src={portfolioSVG} alt={"portfolioSVG"} height={50} width={50}/>

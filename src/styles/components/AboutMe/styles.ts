@@ -41,3 +41,10 @@ export const LinksContainer = styled.div`
     color: ${(props) => props.theme.editorBlueSky};
   }
 `;
+
+export const StyledH1 = styled.h1`
+  width: 80%;
+  font-size: 1.5rem;
+  color: ${(props) => props.theme.editorKeywords};
+  margin-bottom: 1rem;
+`;

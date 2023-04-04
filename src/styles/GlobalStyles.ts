@@ -11,7 +11,6 @@ export default createGlobalStyle`
         /* background: ${(props) => props.theme.productDark4}; */
         /* background: ${(props) => props.theme.productDark4}; */
         /* background: ${(props) => props.theme.productDark2}; */
-        background: ${(props) => props.theme.editorBackground};
         /* background: ${(props) => props.theme.editorStorm}; */
         /* font-family: ${(props) => props.theme.font.primary};
         color: ${(props) => props.theme.productLight1}; */
@@ -36,6 +35,7 @@ export default createGlobalStyle`
     body{
         -webkit-font-smoothing: antialiased;
         overflow-x: hidden;
+        background: ${(props) => props.theme.editorBackground};
         /* background: ${({ theme }) => theme.productBase1}; */
 
         /* height: 100vh; */

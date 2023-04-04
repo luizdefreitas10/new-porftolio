@@ -54,12 +54,13 @@ export const ProjectContainer = styled.div`
   margin-top: 40px;
 `;
 
-export const Button = styled.button`
+export const ProjectNavigate = styled.a`
   border: none;
   border-radius: 5px;
   background-color: ${(props) => props.theme.editorBlueSky};
   color: ${(props) => props.theme.editorLittleSky};
   padding: 7px;
+  font-size: 0.8rem;
 
   &:hover {
     background-color: ${(props) => props.theme.editorTerminalBlue};
