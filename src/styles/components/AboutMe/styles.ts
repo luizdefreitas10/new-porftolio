@@ -39,6 +39,10 @@ export const LinksContainer = styled.div`
     /* justify-content: center; */
     margin-right: 10px;
     color: ${(props) => props.theme.editorBlueSky};
+
+    &:hover {
+      color: ${(props) => props.theme.editorTerminalBlue};
+    }
   }
 `;
 
