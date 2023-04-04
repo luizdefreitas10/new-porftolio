@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Image from "next/image";
 
 export const Container = styled.div`
-  overflow-x: hidden;
   padding: 3rem;
   display: flex;
   justify-content: space-around;
