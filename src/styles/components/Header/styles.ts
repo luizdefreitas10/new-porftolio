@@ -12,9 +12,9 @@ export const Container = styled.div`
   z-index: 3;
   width: 100%;
 
-  @media (${(props) => props.theme.breaks.sm}) {
+  /* @media (${(props) => props.theme.breaks.sm}) {
     justify-content: space-evenly;
-  }
+  } */
 `;
 
 export const HeaderContainer = styled.div`
