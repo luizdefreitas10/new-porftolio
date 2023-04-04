@@ -59,7 +59,7 @@ export default function About() {
             </Navigation>
           </NavigationContainer>
           <NavigationContainer>
-            <Navigation href="https://github.com/luizdefreitas10/       new-porftolio"
+            <Navigation href="https://github.com/luizdefreitas10/new-porftolio"
               target="_blank" rel="noopener noreferrer"
             >
               <Image
