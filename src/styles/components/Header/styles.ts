@@ -13,7 +13,7 @@ export const Container = styled.div`
   width: 100%;
 
   @media (${(props) => props.theme.breaks.sm}) {
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 `;
 
