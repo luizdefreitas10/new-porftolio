@@ -8,6 +8,7 @@ import portfolioSVG from "../../assets/svgs/portfolio-my-profile-browser-svgrepo
 import Image from "next/image";
 import { Link, Element } from "react-scroll";
 import { useRouter } from "next/router";
+import ThemeButton from "../ThemeButton";
 
 export default function Header() {
 
@@ -25,6 +26,7 @@ export default function Header() {
 
         <Navigation href="#contato">Contato</Navigation>
       </HeaderContainer>
+      <ThemeButton />
     </Container>
   );
 }
