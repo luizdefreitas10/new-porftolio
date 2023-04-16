@@ -30,7 +30,7 @@ export const LinksContainer = styled.div`
   width: 80%;
   margin: 0 auto;
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
 
   & a {
     display: flex;

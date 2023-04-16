@@ -109,10 +109,12 @@ export const NavigationContainer = styled.div`
 `;
 
 export const NavContainer = styled.div`
+  /* background-color: green; */
   width: 350px;
   display: flex;
   justify-content: space-between;
   z-index: 2;
+  gap: 1.5rem;
 `;
 
 export const YellowFlyingLogo = styled(Image)`

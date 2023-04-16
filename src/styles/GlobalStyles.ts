@@ -38,7 +38,8 @@ export default createGlobalStyle`
     }
 
     p {
-      font-size: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.3rem;
     }
 
     a {
@@ -53,21 +54,6 @@ export default createGlobalStyle`
     button{
         cursor: pointer;
     }
-
-    /* .swiper-pagination-bullet {
-      opacity: 0.3 !important;
-      background-color: #FFF !important;
-      width: 10px;
-      height: 10px;
-      transition: 0.2s;
-    }
-
-    .swiper-pagination-bullet-active {
-     opacity: 1 !important;
-     background-color: #FFF !important;
-     width: 30px;
-     border-radius: 8px;
-    } */
 
     /* add custom scrollbar in global project 👇🏼👇🏼👻 */
     ::-webkit-scrollbar {
