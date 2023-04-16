@@ -13,6 +13,7 @@ import {
   FlyingLogo,
   BlueSkyFlyingLogo,
   MainContainer,
+  StyledH1
 } from "../../styles/components/About/styles";
 import gitHubIcon from "../../assets/svgs/github-white.svg";
 import linkedinIcon from "../../assets/svgs/linkedin.svg";
@@ -24,10 +25,9 @@ import blueSkyFlyingLogo from "../../assets/svgs/tag-bluesky.svg";
 export default function About() {
   return (
     // <MainContainer>
-
     <Container id="inicio">
       <ContentContainer>
-        <h1>Olá, eu sou</h1>
+        <StyledH1>Olá, eu sou</StyledH1>
         <span>Luiz de Freitas</span>
         <p>{homeText}</p>
         <NavContainer>

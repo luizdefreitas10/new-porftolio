@@ -2,29 +2,68 @@ import {
   Navigation,
   HeaderContainer,
   Container,
-  StyledSvg
+  StyledSvg,
+  FixedContainer,
 } from "../../styles/components/Header/styles";
 import portfolioSVG from "../../assets/svgs/portfolio-my-profile-browser-svgrepo-com.svg";
 import Image from "next/image";
 import { Link, Element } from "react-scroll";
 import { useRouter } from "next/router";
 
-export default function Header() {
+import { useEffect, useState } from "react";
 
+export default function Header() {
   const router = useRouter();
 
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollTop = window.pageYOffset;
+
+      if (currentScrollTop <= lastScrollTop) {
+        setHidden(false);
+      } else {
+        setHidden(true);
+      }
+
+      setLastScrollTop(currentScrollTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollTop]);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <Container>
-      <StyledSvg src={portfolioSVG} alt={"portfolioSVG"} height={50} width={50} onClick={() => router.push('/')}/>
-      <HeaderContainer>
-        <Navigation href="#inicio">Início</Navigation>
+    <FixedContainer className={hidden ? "hidden" : ""}>
+      <Container>
+        <StyledSvg
+          src={portfolioSVG}
+          alt={"portfolioSVG"}
+          height={50}
+          width={50}
+          onClick={() => router.push("/")}
+        />
+        <HeaderContainer>
+          <Navigation onClick={scrollToTop}>Início</Navigation>
 
-        <Navigation href="#sobre">Sobre mim</Navigation>
+          <Navigation href="#sobre">Sobre mim</Navigation>
 
-        <Navigation href="#projetos">Projetos</Navigation>
+          <Navigation href="#projetos">Projetos</Navigation>
 
-        <Navigation href="#contato">Contato</Navigation>
-      </HeaderContainer>
-    </Container>
+          <Navigation href="#contato">Contato</Navigation>
+        </HeaderContainer>
+      </Container>
+    </FixedContainer>
   );
 }

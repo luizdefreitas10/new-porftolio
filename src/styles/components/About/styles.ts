@@ -35,6 +35,10 @@ export const Container = styled.div`
   }
 `;
 
+export const StyledH1 = styled.h1`
+  color: ${(props) => props.theme.editorLittleSky};
+`;
+
 export const StyledImg = styled(Image)`
   border-radius: 5px;
   z-index: 3;
@@ -43,7 +47,6 @@ export const StyledImg = styled(Image)`
 `;
 
 export const ContentContainer = styled.div`
-  color: ${(props) => props.theme.productLight1};
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -70,7 +73,13 @@ export const ContentContainer = styled.div`
       right: 20%;
       height: 4px;
       border-radius: 5px;
-      background-color: ${(props) => props.theme.productLight5};
+      /* background-color: ${(props) => props.theme.editorLittleSky}; */
+      background-image: linear-gradient(
+    to left,
+    ${(props) => props.theme.editorTerminalBlue},
+    ${(props) => props.theme.editorBlueSky},
+    ${(props) => props.theme.editorLittleSky}
+  );
     }
   }
 

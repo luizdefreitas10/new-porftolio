@@ -18,6 +18,7 @@ export default createGlobalStyle`
 
     html {
       scroll-behavior: smooth;
+      margin-top: 6rem;
   }
 
     .Toastify__toast-container {
@@ -87,7 +88,13 @@ export default createGlobalStyle`
     }
 
     ::-webkit-scrollbar-thumb {
-      background: ${(props) => props.theme.editorBlueSky};
+      /* background: ${(props) => props.theme.editorBlueSky}; */
+      background: linear-gradient(
+    to bottom,
+    ${(props) => props.theme.editorTerminalBlue},
+    ${(props) => props.theme.editorBlueSky},
+    ${(props) => props.theme.editorLittleSky}
+  );;
       border-radius: 20px;
     }
 

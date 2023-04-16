@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Image from "next/image";
 
+
+
 export const Container = styled.div`
   padding: 3rem;
   display: flex;
@@ -10,6 +12,7 @@ export const Container = styled.div`
   background: ${(props) => props.theme.editorBackground};
   z-index: 3;
   width: 100%;
+
 
   /* @media (${(props) => props.theme.breaks.sm}) {
     justify-content: space-evenly;
@@ -37,16 +40,33 @@ export const Navigation = styled.a`
 `;
 
 export const FixedContainer = styled.div`
-  margin-top: -6rem;
+
   width: 100%;
-  /* background-color: white; */
+
   position: fixed;
   z-index: 6;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  /* height: 60px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease-in-out;
+  margin-bottom: 9rem;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
 `;
 
 
 export const Main = styled.main`
-  padding-top: 6rem;
+
 `;
 
 export const StyledSvg = styled(Image)`
