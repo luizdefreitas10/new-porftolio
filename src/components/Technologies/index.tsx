@@ -16,7 +16,7 @@ import { Container, StyledH1, BigContainer } from '../../styles/components/Techn
 
 export default function Technologies () {
   return (
-    <BigContainer id="projetos">
+    <BigContainer>
       <StyledH1>Estas são algumas das tecnologias que tenho trabalhado:</StyledH1>
       <Container>
         <Image src={nodejsIcon} alt={"typescript"} height={90} width={90}/>

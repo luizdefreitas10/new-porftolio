@@ -21,6 +21,7 @@ export const Container = styled.div`
  }
 
  & li {
+  line-height: 1.3rem;
   color: ${(props) => props.theme.editorStrings}
  }
 
