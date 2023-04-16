@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  gap: 20px;
+  gap: 30px;
   justify-content: space-evenly;
   /* margin-top: 1rem; */
 `;
@@ -19,5 +19,6 @@ export const StyledH1 = styled.h1`
 `;
 
 export const BigContainer = styled.div`
-  margin-top: 2rem;
+  /* margin-top: 3rem; */
+  padding-top: 3rem;
 `;

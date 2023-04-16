@@ -6,6 +6,7 @@ export const Container = styled.div`
   width: 80%;
   margin: 0 auto;
   margin-bottom: 5rem;
+  padding-top: 3rem;
 `;
 
 export const Form = styled.form`

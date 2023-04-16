@@ -11,7 +11,7 @@ export const MainContainer = styled.div`
 export const Container = styled.div`
   border-radius: 5px;
   display: flex;
-  /* background-color: ${(props) => props.theme.editorStorm}; */
+
   width: 80%;
   margin: 0 auto;
   margin-top: 30px;
@@ -23,7 +23,7 @@ export const Container = styled.div`
   }
 
   @media (${(props) => props.theme.breaks.customBreak}) {
-    /* background-color: red; */
+
     display: flex;
     flex-direction: column;
 
@@ -53,7 +53,7 @@ export const ContentContainer = styled.div`
   gap: 0.8rem;
 
   & p {
-    color: ${(props) => props.theme.editorOrange2};;
+    color: ${(props) => props.theme.editorStrings};;
     width: 80%;
     text-align: justify;
     z-index: 3;
@@ -73,7 +73,6 @@ export const ContentContainer = styled.div`
       right: 20%;
       height: 4px;
       border-radius: 5px;
-      /* background-color: ${(props) => props.theme.editorLittleSky}; */
       background-image: linear-gradient(
     to left,
     ${(props) => props.theme.editorTerminalBlue},
@@ -190,7 +189,6 @@ export const BlueSkyFlyingLogo = styled(Image)`
   /* z-index: 5; */
 
   @media (${(props) => props.theme.breaks.customBreak}) {
-    /* display: none; */
     left: 89%;
   }
 `;

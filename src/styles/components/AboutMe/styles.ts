@@ -3,7 +3,7 @@ import Image from "next/image";
 
 
 export const StyledText = styled.p`
-  color: ${(props) => props.theme.editorOrange2};
+  color: ${(props) => props.theme.editorStrings};
 `;
 
 export const Container = styled.div`
@@ -54,5 +54,5 @@ export const StyledH1 = styled.h1`
 `;
 
 export const IdContainer = styled.div`
-
+  padding-top: 3rem;
 `;

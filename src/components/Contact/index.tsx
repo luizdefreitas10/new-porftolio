@@ -16,7 +16,7 @@ export default function Contact () {
     e.preventDefault();
     console.log('cliquei')
 
-    // Salve os dados no banco de dados Firebase
+
     database
       .ref('messages')
       .push({
@@ -25,11 +25,11 @@ export default function Contact () {
         message,
       })
       .then(() => {
-        // Limpe os campos do formulário após o envio
+
         setName(' ');
         setEmail(' ');
         setMessage('');
-        // Mostre uma mensagem de sucesso ou execute outras ações
+
         toast.success("Sua mensagem foi enviada com sucesso. Obrigado!", {
           position: "top-right",
           autoClose: 5000,
@@ -42,7 +42,7 @@ export default function Contact () {
         })
       })
       .catch((error) => {
-        // Mostre uma mensagem de erro ou execute outras ações
+
         toast.error('Erro ao enviar mensagem:', error);
       });
   };
