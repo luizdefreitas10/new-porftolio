@@ -12,7 +12,7 @@ import {
   YellowFlyingLogo,
   FlyingLogo,
   BlueSkyFlyingLogo,
-  MainContainer
+  MainContainer,
 } from "../../styles/components/About/styles";
 import gitHubIcon from "../../assets/svgs/github-white.svg";
 import linkedinIcon from "../../assets/svgs/linkedin.svg";
@@ -24,6 +24,7 @@ import blueSkyFlyingLogo from "../../assets/svgs/tag-bluesky.svg";
 export default function About() {
   return (
     // <MainContainer>
+
     <Container id="inicio">
       <ContentContainer>
         <h1>Olá, eu sou</h1>
@@ -33,7 +34,8 @@ export default function About() {
           <NavigationContainer>
             <Navigation
               href="https://github.com/luizdefreitas10"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Image
                 src={gitHubIcon}
@@ -47,7 +49,8 @@ export default function About() {
           <NavigationContainer>
             <Navigation
               href="https://www.linkedin.com/in/luiz-de-freitas-lima-neto/"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Image
                 src={linkedinIcon}
@@ -59,11 +62,13 @@ export default function About() {
             </Navigation>
           </NavigationContainer>
           <NavigationContainer>
-            <Navigation href="https://github.com/luizdefreitas10/new-porftolio"
-              target="_blank" rel="noopener noreferrer"
+            <Navigation
+              href="https://github.com/luizdefreitas10/new-porftolio"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Image
-                src='/white-portfolio.png'
+                src="/white-portfolio.png"
                 alt={"portfolio icon"}
                 width={30}
                 height={30}
@@ -100,6 +105,7 @@ export default function About() {
         priority
       />
     </Container>
+
     // </MainContainer>
   );
 }

@@ -185,3 +185,4 @@ export const BlueSkyFlyingLogo = styled(Image)`
     left: 89%;
   }
 `;
+
