@@ -3,6 +3,8 @@ import {
   aboutMeSecondText,
   aboutMeThirdText,
   contentItems,
+  mock,
+  aboutMeFourthText
 } from "../../mocks/About";
 import {
   StyledText,
@@ -29,15 +31,12 @@ export default function AboutMe() {
     <IdContainer id="sobre">
       <Container>
         <StyledH1>Sobre mim: </StyledH1>
+        <StyledText></StyledText>{" "}
         <StyledText>{aboutMeFirstText}</StyledText>{" "}
         <StyledText>{aboutMeSecondText}</StyledText>{" "}
-        <ul>
-          {listItems.map((item) => {
-            return <li key={item}>{item}</li>;
-          })}
-          <li></li>
-        </ul>{" "}
         <StyledText>{aboutMeThirdText}</StyledText>
+        <StyledText>{aboutMeFourthText}</StyledText>
+        <StyledText>{mock}</StyledText>
       </Container>
       <LinksContainer>
         <a

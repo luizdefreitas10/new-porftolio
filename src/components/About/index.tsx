@@ -21,6 +21,7 @@ import portfolioIcon from "../../assets/svgs/iconmonstr-briefcase-13.svg";
 import yellowFlyingLogo from "../../assets/svgs/tag-orange2.svg";
 import redFlyingLogo from "../../assets/svgs/tag-red.svg";
 import blueSkyFlyingLogo from "../../assets/svgs/tag-bluesky.svg";
+// import blueSkyFlyingLogo from "../../../public/tag-bluesky_preview_rev_1.png";
 
 export default function About() {
   return (
