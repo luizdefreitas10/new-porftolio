@@ -1,20 +1,19 @@
-import { useContext } from "react";
-import { useTheme } from "../../context/themeContext";
+import { useContext, useEffect, useState } from "react";
+import { ThemeContext } from "../../context/themeContext";
 
 export default function ThemeButton() {
-  const { toggleTheme, theme } = useTheme();
+
+  const { toggleTheme, theme } = useContext(ThemeContext)
 
   const handleClick = () => {
-    console.log("cliquei no theme button");
+    console.log('cliquei no theme button')
     toggleTheme();
-    console.log("Current theme:", theme);
+    console.log("Current theme:", theme)
   };
 
   return (
     <div>
-      <button type="button" onClick={handleClick}>
-        Tema
-      </button>
+      <button type="button" onClick={handleClick}>Tema</button>
     </div>
   );
 }

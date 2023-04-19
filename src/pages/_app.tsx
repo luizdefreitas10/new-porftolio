@@ -1,28 +1,26 @@
-import type { AppProps } from "next/app";
-import GlobalStyles from "../styles/GlobalStyles";
-import { ThemeProvider as StyledThemeProvider } from "styled-components";
-// import { ThemeProvider } from "../context/themeContext";
-import AOSWrapper from "../components/AOSWrapper/index";
-import { ToastContainer } from "react-toastify";
-// import { ThemeProvider } from "next-themes";
-import { ThemeProvider as CustomThemeProvider } from "../context/themeContext";
-import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from '../styles/theme';
-import "react-toastify/dist/ReactToastify.min.css";
-import { useState } from "react";
+import type { AppProps } from 'next/app';
+import GlobalStyles from '../styles/GlobalStyles';
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
+import { ThemeContext, ThemeProvider } from '../context/themeContext';
+import AOSWrapper from '../components/AOSWrapper/index';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
+import { useContext, useEffect } from 'react';
+import { lightTheme } from '@/styles/theme';
+
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { theme } = useContext(ThemeContext)
 
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+  if (!theme) return null;
+  useEffect(() => {
+    console.log(`tema no myapp: ${theme}`)
+  }, [theme]);
 
   return (
-    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-
-        <GlobalStyles />
+    <ThemeProvider>
+      <StyledThemeProvider theme={theme}>
         <AOSWrapper>
           <ToastContainer
             position="top-right"
@@ -36,9 +34,10 @@ function MyApp({ Component, pageProps }: AppProps) {
             pauseOnHover
             theme="colored"
           />
-          <Component {...pageProps} toggleTheme={toggleTheme}/>
+          <GlobalStyles />
+          <Component {...pageProps} />
         </AOSWrapper>
-
+      </StyledThemeProvider>
     </ThemeProvider>
   );
 }
