@@ -55,4 +55,12 @@ export const mockData = [{
   resume: 'Esta é uma API RESTFULL desenvolvida através da arquitetura MSC (model, service, controller), e funciona como sistema de gerenciamento de vendas no formato dropshipping em que será possível criar, visualizar, deletar e atualizar produtos e vendas.',
   stacks: ['NodeJs', 'JavaScript', 'Express', 'Mocha', 'Chai', 'Sinon', 'Joi'],
   vercel: 'https://github.com/luizdefreitas10/store-manager-api',
+},
+{
+  id: 7,
+  name: 'Ultracar Software',
+  src: storeManagerImg,
+  resume: '',
+  stacks: ['React', 'Styled-components'],
+  vercel: 'https://ultracar-software.vercel.app/',
 }];
