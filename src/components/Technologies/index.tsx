@@ -19,7 +19,7 @@ export default function Technologies () {
     <BigContainer>
       <StyledH1>Estas são algumas das tecnologias que tenho trabalhado:</StyledH1>
       <Container>
-        <Image src={nodejsIcon} alt={"typescript"} height={90} width={90}/>
+        <Image src={nodejsIcon} alt={"typescript"} height={90} width={90} />
         <Image src={typescriptIcon} alt={"typescript"} height={90} width={90}/>
         <Image src={javascriptIcon} alt={"javascript"} height={90} width={90}/>
         <Image src={nextjsIcon} alt={"javascript"} height={90} width={90}/>

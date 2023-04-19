@@ -40,6 +40,12 @@ export const Card = styled.div`
     flex-wrap: wrap;
     font-size: 0.8rem;
   }
+
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const CardContainer = styled.div`

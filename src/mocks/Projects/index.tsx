@@ -5,6 +5,7 @@ import solarSystemImg from '../../assets/svgs/projectsMockImgs/solar-system-reac
 import pixelArtImg from '../../assets/svgs/projectsMockImgs/pixel-art.png'
 import blogsApiImg from '../../assets/svgs/projectsMockImgs/1669930711-blogs-api.webp'
 import storeManagerImg from '../../assets/svgs/projectsMockImgs/Captura de ecrã 2022-12-22, às 20.22.38.png';
+import ultracarImg from '../../../public/ultracar-home.png'
 
 export const mockData = [{
   id: 1,
@@ -57,10 +58,10 @@ export const mockData = [{
   vercel: 'https://github.com/luizdefreitas10/store-manager-api',
 },
 {
-  id: 7,
+  id: 8,
   name: 'Ultracar Software',
-  src: storeManagerImg,
-  resume: '',
+  src: ultracarImg,
+  resume: 'Este projeto foi realizado durante o processo seletivo da Ultracar, trata-se de uma aplicação de controle de serviços, onde o usuário solicita um serviço, que por sua vez é atribuído para um funcionário responsável, que se encarregará de encerrar o serviço.',
   stacks: ['React', 'Styled-components'],
   vercel: 'https://ultracar-software.vercel.app/',
 }];
