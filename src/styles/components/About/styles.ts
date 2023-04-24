@@ -43,7 +43,7 @@ export const StyledImg = styled(Image)`
   border-radius: 5px;
   z-index: 3;
   /* box-shadow: -2px 3px 3px ${(props) => props.theme.editorKeywords}; */
-  box-shadow: -2px 2px 2px black;
+  /* box-shadow: -2px 2px 2px black; */
 `;
 
 export const ContentContainer = styled.div`

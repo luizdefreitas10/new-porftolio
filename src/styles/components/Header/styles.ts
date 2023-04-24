@@ -2,6 +2,17 @@ import styled from "styled-components";
 import Image from "next/image";
 
 
+export const StyledSg = styled(Image)`
+  /* background-color: ${(props) => props.theme.editorLittleSky}; */
+    display: none;
+
+  @media (${(props) => props.theme.breaks.mobile}) {
+    display: flex;
+    /* position: relative; */
+    /* background-color: aliceblue; */
+  }
+`;
+
 
 export const Container = styled.div`
   padding: 3rem;
@@ -14,9 +25,9 @@ export const Container = styled.div`
   width: 100%;
 
 
-  /* @media (${(props) => props.theme.breaks.sm}) {
+  @media (${(props) => props.theme.breaks.mobile}) {
     justify-content: space-evenly;
-  } */
+  }
 `;
 
 export const HeaderContainer = styled.div`
@@ -25,6 +36,10 @@ export const HeaderContainer = styled.div`
   width: 50%;
   z-index: 3;
   border-radius: 5px;
+
+  @media (${(props) => props.theme.breaks.mobile}) {
+    display: none;
+  }
 `;
 
 export const Navigation = styled.a`
@@ -35,6 +50,10 @@ export const Navigation = styled.a`
 
     &:hover {
     color: ${(props) => props.theme.editorTerminalBlue};
+    }
+
+    @media (${(props) => props.theme.breaks.mobile}) {
+      display: none;
     }
 
 `;
@@ -71,4 +90,11 @@ export const Main = styled.main`
 
 export const StyledSvg = styled(Image)`
   cursor: pointer;
+`;
+
+export const StyledMenuDiv = styled.div`
+  background-color: yellow;
+  z-index: 99999;
+  /* width: 100%;
+  height: 100%; */
 `;

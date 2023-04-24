@@ -4,8 +4,11 @@ import {
   Container,
   StyledSvg,
   FixedContainer,
+  StyledSg,
+  StyledMenuDiv
 } from "../../styles/components/Header/styles";
 import portfolioSVG from "../../assets/svgs/portfolio-my-profile-browser-svgrepo-com.svg";
+import MenuHmburguer from "../../../public/menus.png";
 import Image from "next/image";
 import { Link, Element } from "react-scroll";
 import { useRouter } from "next/router";
@@ -17,6 +20,8 @@ export default function Header() {
 
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [hidden, setHidden] = useState(false);
+
+  const [hamburguer, setHambhurguer] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,6 +59,19 @@ export default function Header() {
           width={50}
           onClick={() => router.push("/")}
         />
+
+        <StyledSg
+          src={MenuHmburguer}
+          alt="menu"
+          width={50}
+          height={50}
+          // onClick={() => setHambhurguer(!hamburguer)}
+        />
+
+        { hamburguer && (
+          <StyledMenuDiv>Cliquei</StyledMenuDiv>
+        ) }
+
         <HeaderContainer>
           <Navigation onClick={scrollToTop}>Início</Navigation>
 

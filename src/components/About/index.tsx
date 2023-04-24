@@ -99,10 +99,10 @@ export default function About() {
       />
       {/* <Image src='/src/assets/imgs/hacker.jpeg' alt={'hacker coding'} width={350} height={350} /> */}
       <StyledImg
-        src="/luiz-sameiro-copy.jpeg"
+        src="/nobg-luiz-2.png"
         alt={"coding"}
         width={350}
-        height={350}
+        height={400}
         priority
       />
     </Container>
