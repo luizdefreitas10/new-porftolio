@@ -13,6 +13,7 @@ export const MenuContainer = styled.div`
   flex-wrap: wrap;
   position: fixed;
   right: 0;
+  top: 5.7%;
   z-index: 9;
 `;
 
