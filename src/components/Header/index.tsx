@@ -13,7 +13,8 @@ import Image from "next/image";
 import { Link, Element } from "react-scroll";
 import { useRouter } from "next/router";
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import PortfolioContext from "@/context/PortfolioContext";
 
 export default function Header() {
   const router = useRouter();
@@ -21,7 +22,7 @@ export default function Header() {
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [hidden, setHidden] = useState(false);
 
-  const [hamburguer, setHambhurguer] = useState(false);
+  const { isMenuOpen, toggleMenu } = useContext(PortfolioContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,12 +66,8 @@ export default function Header() {
           alt="menu"
           width={50}
           height={50}
-          // onClick={() => setHambhurguer(!hamburguer)}
+          onClick={() => toggleMenu()}
         />
-
-        { hamburguer && (
-          <StyledMenuDiv>Cliquei</StyledMenuDiv>
-        ) }
 
         <HeaderContainer>
           <Navigation onClick={scrollToTop}>Início</Navigation>

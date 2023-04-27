@@ -8,8 +8,7 @@ export const StyledSg = styled(Image)`
 
   @media (${(props) => props.theme.breaks.mobile}) {
     display: flex;
-    /* position: relative; */
-    /* background-color: aliceblue; */
+    cursor: pointer;
   }
 `;
 

@@ -13,10 +13,14 @@ import {ProjectContainer } from '../styles/components/Projects/styles'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import PortfolioContext from '@/context/PortfolioContext'
+import MobileNavBar from '@/components/MobileNavBar'
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const { isMenuOpen } = useContext(PortfolioContext);
 
   return (
     <>
@@ -30,6 +34,7 @@ export default function Home() {
         <FixedContainer data-aos='fade-up' data-aos-duration='2000'>
           <Header  />
         </FixedContainer>
+        { isMenuOpen && <MobileNavBar /> }
         <div data-aos='fade-right' data-aos-duration='2000' id="inicio">
           <About />
         </div>
