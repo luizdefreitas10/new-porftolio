@@ -56,4 +56,11 @@ export const StyledH1 = styled.h1`
 
 export const IdContainer = styled.div`
   padding-top: 3rem;
+  overflow-x: hidden;
+  width: 100%;
 `;
+
+export const DataAosContainer = styled.div`
+  display: flex;
+  
+  `

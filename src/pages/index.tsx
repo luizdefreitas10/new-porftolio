@@ -16,6 +16,7 @@ import Footer from '@/components/Footer'
 import { useContext, useEffect, useState } from 'react'
 import PortfolioContext from '@/context/PortfolioContext'
 import MobileNavBar from '@/components/MobileNavBar'
+import { DataAosContainer } from '../styles/components/AboutMe/styles'
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -35,12 +36,12 @@ export default function Home() {
           <Header  />
         </FixedContainer>
         { isMenuOpen && <MobileNavBar /> }
-        <div data-aos='fade-right' data-aos-duration='2000' id="inicio">
+        <div data-aos='fade-right' data-aos-duration='2000'>
           <About />
         </div>
-        <div data-aos='fade-left' data-aos-duration='2000'>
+        <DataAosContainer data-aos='fade-left' data-aos-duration='2000'>
           <AboutMe  />
-        </div>
+        </DataAosContainer>
         <div data-aos='fade-right' data-aos-duration='2000'>
           <Technologies />
         </div>

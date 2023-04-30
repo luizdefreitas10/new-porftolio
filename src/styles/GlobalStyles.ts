@@ -14,6 +14,8 @@ export default createGlobalStyle`
       scroll-behavior: smooth;
       margin-top: 6rem;
       font-size: 1.2rem;
+      overflow-x: hidden;
+
   }
 
     .Toastify__toast-container {
