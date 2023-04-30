@@ -1,6 +1,6 @@
 export default {
   breaks: {
-    minimobile: "max-width: 340px",
+    minimobile: "max-width: 540px",
     mobile: "max-width: 767px",
     tablet: "768px <= width <= 1024px",
     desktop: "min-width: 1024px",

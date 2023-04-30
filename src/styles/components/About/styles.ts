@@ -63,7 +63,8 @@ export const ContentContainer = styled.div`
     font-size: 3.5rem;
     color: ${(props) => props.theme.editorKeywords};
     position: relative;
-    display: inline-block;
+    display: flex;
+    /* background-color: green; */
 
     &::before {
       content: '';
@@ -79,6 +80,10 @@ export const ContentContainer = styled.div`
     ${(props) => props.theme.editorBlueSky},
     ${(props) => props.theme.editorLittleSky}
   );
+    }
+
+    @media (${(props) => props.theme.breaks.minimobile}) {
+      text-align: center;
     }
   }
 
@@ -110,11 +115,20 @@ export const NavigationContainer = styled.div`
 
 export const NavContainer = styled.div`
   /* background-color: green; */
-  width: 350px;
+  /* width: 350px; */
+  width: 80%;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   z-index: 2;
   gap: 1.5rem;
+  /* background-color: red; */
+
+  @media (${(props) => props.theme.breaks.minimobile}) {
+    /* display: flex;
+    flex-direction: column; */
+    /* flex-wrap: wrap; */
+  }
 `;
 
 export const YellowFlyingLogo = styled(Image)`
