@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  top: 0;
   height: 100%;
   width: 100%;
-  background-color: ${(props) => props.theme.editorBackground};
+  /* background-color: ${(props) => props.theme.editorBackground}; */
+  position: absolute;
   `;
 
 export const MenuContainer = styled.div`
@@ -29,6 +31,7 @@ export const Nav = styled.a`
   justify-content: start;
 
   &:hover {
+    /* background-color: ${(props) => props.theme.editorLittleSky}; */
     color: ${(props) => props.theme.editorLittleSky};
   }
 `;

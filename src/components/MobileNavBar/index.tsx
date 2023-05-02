@@ -34,10 +34,26 @@ export default function MobileNavBar() {
   return (
     <Container>
       <MenuContainer>
-        <Nav onClick={scrollToTop}>Início</Nav>
-        <Nav href="#sobre" onClick={toggleMenu}>Sobre mim</Nav>
-        <Nav href="#projetos" onClick={toggleMenu}>Projetos</Nav>
-        <Nav href="#contato" onClick={toggleMenu}>Contato</Nav>
+        <ul>
+          <li>
+            <Nav onClick={scrollToTop}>Início</Nav>
+          </li>
+          <li>
+            <Nav href="#sobre" onClick={toggleMenu}>
+              Sobre mim
+            </Nav>
+          </li>
+          <li>
+            <Nav href="#projetos" onClick={toggleMenu}>
+              Projetos
+            </Nav>
+          </li>
+          <li>
+            <Nav href="#contato" onClick={toggleMenu}>
+              Contato
+            </Nav>
+          </li>
+        </ul>
       </MenuContainer>
     </Container>
   );
