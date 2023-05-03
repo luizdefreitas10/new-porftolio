@@ -18,9 +18,9 @@ import {
 import gitHubIcon from "../../assets/svgs/github-white.svg";
 import linkedinIcon from "../../assets/svgs/linkedin.svg";
 import portfolioIcon from "../../assets/svgs/iconmonstr-briefcase-13.svg";
-import yellowFlyingLogo from "../../assets/svgs/tag-orange2.svg";
-import redFlyingLogo from "../../assets/svgs/tag-red.svg";
-import blueSkyFlyingLogo from "../../assets/svgs/tag-bluesky.svg";
+import yellowFlyingLogo from "../../assets/svgs/tag-orange2.png";
+import redFlyingLogo from "../../assets/svgs/tag-red.png";
+import blueSkyFlyingLogo from "../../assets/svgs/tag-bluesky.png";
 // import blueSkyFlyingLogo from "../../../public/tag-bluesky_preview_rev_1.png";
 
 export default function About() {

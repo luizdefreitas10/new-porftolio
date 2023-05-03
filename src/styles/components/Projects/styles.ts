@@ -19,6 +19,7 @@ export const Card = styled.div`
   gap: 1rem;
   border-radius: 10px;
   min-width: 12rem;
+  box-shadow: 1px 1px 2px;
 
   & img {
     width: 100px;
@@ -72,10 +73,13 @@ export const ProjectNavigate = styled.a`
   color: ${(props) => props.theme.editorLittleSky};
   padding: 7px;
   font-size: 0.8rem;
+  /* box-shadow: 1px 1px 2px; */
 
   &:hover {
     background-color: ${(props) => props.theme.editorTerminalBlue};
     color: ${(props) => props.theme.editorBlack};
 
+    transform: scale(1.1);
+  
   }
 `;

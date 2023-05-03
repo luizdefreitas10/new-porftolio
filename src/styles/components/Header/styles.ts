@@ -22,6 +22,7 @@ export const Container = styled.div`
   background: ${(props) => props.theme.editorBackground};
   z-index: 3;
   width: 100%;
+  box-shadow: 1px 1px 2px;
 
 
   @media (${(props) => props.theme.breaks.mobile}) {

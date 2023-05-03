@@ -17,6 +17,7 @@ export const InputField = styled.input`
   padding: 0.8rem 0;
   padding-left: 0.8rem;
   outline: none;
+  box-shadow: 1px 1px 2px #000;
 
   &:focus,
   &:not(:placeholder-shown) {

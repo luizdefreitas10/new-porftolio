@@ -30,6 +30,7 @@ export const TextArea = styled.textarea`
   background-color: ${(props) => props.theme.editorStorm};
   height: 5rem;
   margin-top: 1rem;
+  box-shadow: 1px 1px 2px #000;
 
   &::placeholder {
     font-size: 0.9rem;

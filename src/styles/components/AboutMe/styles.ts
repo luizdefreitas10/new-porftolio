@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import IconComputer from '../../../../public/icon-computer.png'
 
 
 export const StyledText = styled.p`
@@ -11,6 +12,8 @@ export const Container = styled.div`
  width: 80%;
  margin: 0 auto;
  margin-top: 2rem;
+
+ background-color: ${(props) => props.theme.editorBackground};
 
  & p {
   margin-bottom: 10px;
@@ -58,7 +61,8 @@ export const IdContainer = styled.div`
   padding-top: 3rem;
   overflow-x: hidden;
   width: 100%;
-  
+  background-image: url(IconComputer);
+  z-index: 99;
 `;
 
 export const DataAosContainer = styled.div`
