@@ -33,7 +33,7 @@ export default function MobileNavBar() {
 
   return (
     <Container>
-      <MenuContainer>
+      <MenuContainer isOpen={isMenuOpen}>
         <ul>
           <li>
             <Nav onClick={scrollToTop}>Início</Nav>

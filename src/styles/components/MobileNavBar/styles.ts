@@ -8,7 +8,7 @@ export const Container = styled.div`
   position: absolute;
   `;
 
-export const MenuContainer = styled.div`
+export const MenuContainer = styled.div<{ isOpen: boolean }>`
   width: 50%;
   height: 100%;
   display: flex;
@@ -20,6 +20,8 @@ export const MenuContainer = styled.div`
   z-index: 9;
   background-color: ${(props) => props.theme.editorStorm};
   box-shadow: 2px 2px 3px;
+  transform: ${(props) => props.isOpen ? 'translateX(0)' : 'translateX(100%)'};
+  transition: all 1s ease-in-out;
 `;
 
 export const Nav = styled.a`
