@@ -47,6 +47,7 @@ export const Button = styled.button`
   width: 4rem;
   margin-top: 1rem;
   font-size: 0.8rem;
+  box-shadow: 2px 2px  2px black;
 
   &:hover {
     background-color: ${(props) => props.theme.editorTerminalBlue};

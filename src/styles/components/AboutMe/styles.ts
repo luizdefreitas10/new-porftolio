@@ -34,7 +34,10 @@ export const LinksContainer = styled.div`
   width: 80%;
   margin: 0 auto;
   display: flex;
+  justify-content: space-around;
   gap: 1.5rem;
+  /* background-color: red; */
+  padding: 10px;
 
   & a {
     display: flex;

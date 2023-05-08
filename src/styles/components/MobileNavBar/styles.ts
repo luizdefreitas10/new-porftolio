@@ -22,11 +22,11 @@ export const MenuContainer = styled.div<{ isOpen: boolean }>`
   /* background-color: blue; */
   background-color: rgba(0, 0, 0, 0.4);
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
-  transition: transform 1s ease 0s; // Adicione esta linha
+  transition: transform 1s ease 0s;
 `;
 
 export const Nav = styled.a`
-
+  
   width: 50%;
   padding: 10px;
   /* background-color: ${(props) => props.theme.editorStorm}; */
@@ -57,6 +57,7 @@ export const UlContainer = styled.ul`
 export const Li = styled.li`
   /* background-color: red; */
   border-radius: 5px;
+  
   &:hover{
     background-color: ${(props) => props.theme.editorTerminalBlue};
     /* color: ${(props) => props.theme.editorBackground}; */
