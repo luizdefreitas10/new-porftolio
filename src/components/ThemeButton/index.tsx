@@ -7,8 +7,9 @@ export default function ThemeButton() {
 
   const handleClick = () => {
     console.log('cliquei no theme button')
+    console.log("Current theme no button antes de clicar:", theme)
     toggleTheme();
-    console.log("Current theme:", theme)
+    console.log("Current theme no button apos clicar:", theme)
   };
 
   return (

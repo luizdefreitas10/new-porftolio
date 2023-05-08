@@ -6,7 +6,7 @@ import AOSWrapper from '../components/AOSWrapper/index';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import { useContext, useEffect } from 'react';
-import { lightTheme } from '@/styles/theme';
+import { lightTheme, darkTheme } from '@/styles/theme';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   if (!theme) return null;
   useEffect(() => {
-    console.log(`tema no myapp: ${theme}`)
+    console.log(`tema no myapp: ${theme.editorBackground}`)
   }, [theme]);
 
   return (

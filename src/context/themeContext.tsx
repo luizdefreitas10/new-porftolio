@@ -11,10 +11,12 @@ interface ThemeProviderProps {
   children: ReactNode;
 }
 
-export const ThemeContext = createContext<IThemeContext>({
+export const ThemeContext = createContext<IThemeContext>(
+  {
   theme: darkTheme,
   toggleTheme: () => {},
-});
+}
+);
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [currentTheme, setCurrentTheme] = useState<DefaultTheme | null>(null);
@@ -26,7 +28,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 
   const toggleTheme = () => {
     console.log('chamei toggle')
-    const newTheme = currentTheme === darkTheme ? lightTheme : darkTheme;
+    const newTheme = currentTheme == darkTheme ? lightTheme : darkTheme;
     setCurrentTheme(newTheme);
     localStorage.setItem('theme', newTheme === lightTheme ? 'light' : 'dark');
   };

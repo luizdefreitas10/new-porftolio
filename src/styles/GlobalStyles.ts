@@ -32,7 +32,7 @@ export default createGlobalStyle`
 
     body{
         overflow-x: hidden;
-        background: ${(props) => props.theme.editorBackground};
+        background: ${({theme}) => theme.editorBackground};
     }
 
     p {
