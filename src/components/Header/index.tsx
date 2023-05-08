@@ -22,7 +22,7 @@ export default function Header() {
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [hidden, setHidden] = useState(false);
 
-  const { isMenuOpen, toggleMenu } = useContext(PortfolioContext);
+  const { isMenuOpen, toggleMenu, appTheme, toggleTheme } = useContext(PortfolioContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,6 +48,12 @@ export default function Header() {
       top: 0,
       behavior: "smooth",
     });
+  };
+
+  const handleClick = () => {
+    toggleTheme();
+    console.log('cliquei');
+    console.log(appTheme)
   };
 
   return (
@@ -78,6 +84,7 @@ export default function Header() {
 
           <Navigation href="#contato">Contato</Navigation>
         </HeaderContainer>
+        <button type="button" onClick={handleClick}>Tema</button>
       </Container>
     </FixedContainer>
   );

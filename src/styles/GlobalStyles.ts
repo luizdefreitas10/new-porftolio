@@ -14,7 +14,7 @@ export default createGlobalStyle`
       scroll-behavior: smooth;
       margin-top: 6rem;
       font-size: 1.2rem;
-      /* overflow-x: hidden; */
+      overflow-x: hidden;
 
   }
 
@@ -35,7 +35,7 @@ export default createGlobalStyle`
     }
 
     body{
-        /* overflow-x: hidden; */
+        overflow-x: hidden;
         background: ${(props) => props.theme.editorBackground};
     }
 

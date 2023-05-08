@@ -2,15 +2,21 @@ import "react-toastify/dist/ReactToastify.min.css";
 import type { AppProps } from "next/app";
 import GlobalStyles from "../styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
-import theme from "../styles/theme";
+import * as theme from "../styles/theme";
 import AOSWrapper from "../components/AOSWrapper/index";
 import { ToastContainer, toast, Slide } from "react-toastify";
-import { PortfolioProvider } from "@/context/PortfolioContext";
+import PortfolioContext, { PortfolioProvider } from "@/context/PortfolioContext";
+import { useContext } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
+
+  const { appTheme } = useContext(PortfolioContext);
+
+  console.log(appTheme);
+
   return (
     <PortfolioProvider>
-      <ThemeProvider theme={theme}>
+      {/* // <ThemeProvider theme={ appTheme }> */}
         <AOSWrapper>
           <ToastContainer
             position="top-right"
@@ -27,7 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <GlobalStyles />
           <Component {...pageProps} />
         </AOSWrapper>
-      </ThemeProvider>
+      {/* // </ThemeProvider> */}
     </PortfolioProvider>
   );
 }

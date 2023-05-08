@@ -26,7 +26,6 @@ export const MenuContainer = styled.div<{ isOpen: boolean }>`
 `;
 
 export const Nav = styled.a`
-  
   width: 50%;
   padding: 10px;
   /* background-color: ${(props) => props.theme.editorStorm}; */
@@ -51,13 +50,13 @@ export const UlContainer = styled.ul`
   position: absolute;
   right: 0;
   box-shadow: 2px 2px 3px 2px black;
-  
+
 `;
 
 export const Li = styled.li`
   /* background-color: red; */
   border-radius: 5px;
-  
+
   &:hover{
     background-color: ${(props) => props.theme.editorTerminalBlue};
     /* color: ${(props) => props.theme.editorBackground}; */
