@@ -4,6 +4,8 @@ import {
   Container,
   MenuContainer,
   Nav,
+  UlContainer,
+  Li
 } from "../../styles/components/MobileNavBar/styles";
 
 export default function MobileNavBar() {
@@ -32,29 +34,31 @@ export default function MobileNavBar() {
   };
 
   return (
-    <Container>
+    // <Container>
       <MenuContainer isOpen={isMenuOpen}>
-        <ul>
-          <li>
-            <Nav onClick={scrollToTop}>Início</Nav>
-          </li>
-          <li>
-            <Nav href="#sobre" onClick={toggleMenu}>
-              Sobre mim
-            </Nav>
-          </li>
-          <li>
-            <Nav href="#projetos" onClick={toggleMenu}>
-              Projetos
-            </Nav>
-          </li>
-          <li>
-            <Nav href="#contato" onClick={toggleMenu}>
-              Contato
-            </Nav>
-          </li>
-        </ul>
+
+          <UlContainer>
+            <Li>
+              <Nav onClick={scrollToTop}>Início</Nav>
+            </Li>
+            <Li>
+              <Nav href="#sobre" onClick={toggleMenu}>
+                Sobre mim
+              </Nav>
+            </Li>
+            <Li>
+              <Nav href="#projetos" onClick={toggleMenu}>
+                Projetos
+              </Nav>
+            </Li>
+            <Li>
+              <Nav href="#contato" onClick={toggleMenu}>
+                Contato
+              </Nav>
+            </Li>
+          </UlContainer>
+
       </MenuContainer>
-    </Container>
+    // </Container>
   );
 }

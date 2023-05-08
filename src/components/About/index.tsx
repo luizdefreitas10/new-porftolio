@@ -13,7 +13,8 @@ import {
   FlyingLogo,
   BlueSkyFlyingLogo,
   MainContainer,
-  StyledH1
+  StyledH1,
+  WavyDiv
 } from "../../styles/components/About/styles";
 import gitHubIcon from "../../assets/svgs/github-white.svg";
 import linkedinIcon from "../../assets/svgs/linkedin.svg";
@@ -98,6 +99,7 @@ export default function About() {
         height={70}
       />
       {/* <Image src='/src/assets/imgs/hacker.jpeg' alt={'hacker coding'} width={350} height={350} /> */}
+      {/* < WavyDiv /> */}
       <StyledImg
         src="/nobg-luiz-2.png"
         alt={"coding"}

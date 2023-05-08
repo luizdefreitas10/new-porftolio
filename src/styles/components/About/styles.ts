@@ -185,6 +185,8 @@ export const FlyingLogo = styled(Image)`
 `;
 
 export const BlueSkyFlyingLogo = styled(Image)`
+  backdrop-filter: blur( 2.5px );
+  -webkit-backdrop-filter: blur( 2.5px );
   @keyframes float {
         0% {
           transform: translateY(0);
@@ -202,10 +204,20 @@ export const BlueSkyFlyingLogo = styled(Image)`
   left: 4%;
   top: 50%;
   opacity: 1;
-  /* z-index: 5; */
 
   @media (${(props) => props.theme.breaks.customBreak}) {
     left: 89%;
   }
 `;
 
+export const WavyDiv = styled.div`
+ width: 400px;
+  height: 300px;
+  background-color: #f0f0f0;
+  clip-path: path('M 0 60 Q 40 100 80 60 T 200 60 T 320 60 T 400 60 Q 400 110 400 150 Q 400 220 380 260 Q 330 300 250 290 Q 170 300 100 290 Q 0 300 0 250 L 0 60 Z');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: -1;
+`;
