@@ -25,9 +25,10 @@ export const Container = styled.div`
   box-shadow: 1px 1px 2px;
 
   & button {
-    border-radius: 50%;
+    /* border-radius: 50%; */
     background-color: transparent;
-    box-shadow: 1px 1px 2px black;
+    /* box-shadow: 1px 1px 2px black; */
+    border: none;
   }
 
 
