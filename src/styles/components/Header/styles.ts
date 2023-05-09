@@ -24,6 +24,12 @@ export const Container = styled.div`
   width: 100%;
   box-shadow: 1px 1px 2px;
 
+  & button {
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 1px 1px 2px black;
+  }
+
 
   @media (${(props) => props.theme.breaks.mobile}) {
     justify-content: space-evenly;

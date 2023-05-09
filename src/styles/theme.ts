@@ -64,7 +64,7 @@ export const lightTheme: Theme = {
   editorBackground: "#d5d6db",
   editorStorm: "#24283b",
   editorBlack: "#414868",
-  editorStrings: "#9ece6a",
+  editorStrings: "#1a1b26",
   editorKeywords: "#f7768e",
   editorTerminalBlue: "#c0caf5",
   editorBlueSky: "#7aa2f7",
