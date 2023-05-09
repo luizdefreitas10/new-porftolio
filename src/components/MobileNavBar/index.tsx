@@ -34,10 +34,10 @@ export default function MobileNavBar() {
   };
 
   return (
-    // <Container>
+    <Container>
       <MenuContainer isOpen={isMenuOpen}>
 
-          <UlContainer>
+          <UlContainer isOpen={isMenuOpen}>
             <Li>
               <Nav onClick={scrollToTop}>Início</Nav>
             </Li>
@@ -59,6 +59,6 @@ export default function MobileNavBar() {
           </UlContainer>
 
       </MenuContainer>
-    // </Container>
+    </Container>
   );
 }
