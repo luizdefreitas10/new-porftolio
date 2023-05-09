@@ -62,15 +62,15 @@ export default {
 
 export const lightTheme: Theme = {
   editorBackground: "#d5d6db",
-  editorStorm: "#9699a3",
-  editorBlack: "#0f0f14",
-  editorStrings: "#485e30",
-  editorKeywords: "#8c4351",
-  editorTerminalBlue: "#634f30",
-  editorBlueSky: "#565a6e",
-  editorLittleSky: "#343b58",
-  editorOrange1: "#34548a",
-  editorOrange2: "#166775",
+  editorStorm: "#24283b",
+  editorBlack: "#414868",
+  editorStrings: "#9ece6a",
+  editorKeywords: "#f7768e",
+  editorTerminalBlue: "#c0caf5",
+  editorBlueSky: "#7aa2f7",
+  editorLittleSky: "#b4f9f8",
+  editorOrange1: "#ff9e64",
+  editorOrange2: "#e0af68",
   breaks: {
     minimobile: "max-width: 340px",
     mobile: "max-width: 767px",
@@ -91,6 +91,38 @@ export const lightTheme: Theme = {
   editorSupport: '',
   editorConstant: ''
 };
+
+// export const lightTheme: Theme = {
+//   editorBackground: "#d5d6db",
+//   editorStorm: "#9699a3",
+//   editorBlack: "#0f0f14",
+//   editorStrings: "#485e30",
+//   editorKeywords: "#8c4351",
+//   editorTerminalBlue: "#634f30",
+//   editorBlueSky: "#565a6e",
+//   editorLittleSky: "#343b58",
+//   editorOrange1: "#34548a",
+//   editorOrange2: "#166775",
+//   breaks: {
+//     minimobile: "max-width: 340px",
+//     mobile: "max-width: 767px",
+//     tablet: "768px <= width <= 1024px",
+//     desktop: "min-width: 1024px",
+//     customBreak: "max-width: 890px",
+//     sm: "max-width: 576px",
+//     md: "max-width: 768px",
+//     lg: "max-width: 992px",
+//     xl: "max-width: 1200px",
+//     xxl: "min-width: 1201px",
+//   },
+//   editorComments: '',
+//   editorParameters: '',
+//   editorMarkdown: '',
+//   editorForeground: '',
+//   editorNames: '',
+//   editorSupport: '',
+//   editorConstant: ''
+// };
 
 export const darkTheme: Theme = {
   editorBackground: "#1a1b26",
