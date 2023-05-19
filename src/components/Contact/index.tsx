@@ -73,7 +73,7 @@ export default function Contact () {
         />
         <TextArea
           maxLength={500}
-          placeholder="Digete sua mensagem ..."
+          placeholder="Digite sua mensagem ..."
           value={message}
           onChange={(e) => handleChange(e, setMessage)}
         ></TextArea>
