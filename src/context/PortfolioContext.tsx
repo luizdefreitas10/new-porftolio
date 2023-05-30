@@ -8,6 +8,9 @@ interface PortfolioContextProps {
   toggleMenu: () => void;
   appTheme: DefaultTheme;
   toggleTheme: () => void;
+  toggleHamburguer: () => void;
+  isChecked: boolean;
+  toggleCheckBurguer: () => void;
 }
 
 const PortfolioContext = createContext<PortfolioContextProps>({
@@ -21,6 +24,7 @@ interface PortfolioProps {
 export const PortfolioProvider: React.FC<PortfolioProps> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [appTheme, setAppTheme] = useState(darkTheme);
+  const [isChecked, setIsChecked] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -30,8 +34,22 @@ export const PortfolioProvider: React.FC<PortfolioProps> = ({ children }) => {
     setAppTheme( appTheme == darkTheme ? lightTheme : darkTheme );
   };
 
+  const toggleHamburguer = () => {
+    console.log('chamei a funcao toggle hamburguer');
+    if (isChecked == true) {
+      setIsChecked(false);
+    } else {
+      setIsChecked(true);
+    }
+  };
+
+  const toggleCheckBurguer = () => {
+    console.log('chamei a funcao checkburguer')
+    setIsChecked(!isChecked);
+  };
+
   return (
-    <PortfolioContext.Provider value={{ isMenuOpen, toggleMenu, appTheme,  toggleTheme}}>
+    <PortfolioContext.Provider value={{ isMenuOpen, toggleMenu, appTheme,  toggleTheme, toggleHamburguer, isChecked, toggleCheckBurguer}}>
       <ThemeProvider theme={appTheme}>{children}</ThemeProvider>
     </PortfolioContext.Provider>
   );

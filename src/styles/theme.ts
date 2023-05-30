@@ -68,7 +68,7 @@ export const lightTheme: Theme = {
   editorKeywords: "#f7768e",
   editorTerminalBlue: "#c0caf5",
   editorBlueSky: "#7aa2f7",
-  editorLittleSky: "#f7768e",
+  editorLittleSky: "#b4f9f8",
   editorOrange1: "#ff9e64",
   editorOrange2: "#e0af68",
   breaks: {

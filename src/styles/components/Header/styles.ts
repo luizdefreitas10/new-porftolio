@@ -2,8 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 
 
-export const StyledSg = styled(Image)`
-  /* background-color: ${(props) => props.theme.editorLittleSky}; */
+export const StyledSg = styled.div`
     display: none;
 
   @media (${(props) => props.theme.breaks.mobile}) {

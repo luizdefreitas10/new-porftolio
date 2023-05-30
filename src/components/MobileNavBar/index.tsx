@@ -5,16 +5,18 @@ import {
   MenuContainer,
   Nav,
   UlContainer,
-  Li
+  Li,
 } from "../../styles/components/MobileNavBar/styles";
 
 export default function MobileNavBar() {
-  const { isMenuOpen, toggleMenu } = useContext(PortfolioContext);
+  const { isMenuOpen, toggleMenu, toggleCheckBurguer } =
+    useContext(PortfolioContext);
 
   useEffect(() => {
     const handleScroll = () => {
       if (isMenuOpen) {
         toggleMenu();
+        toggleCheckBurguer();
       }
     };
 
@@ -28,36 +30,54 @@ export default function MobileNavBar() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "auto",
     });
     toggleMenu();
+  };
+
+  const handleNavClick = () => {
+    console.log("cliquei");
+    toggleCheckBurguer();
   };
 
   return (
     <Container>
       <MenuContainer isOpen={isMenuOpen}>
+        <UlContainer isOpen={isMenuOpen}>
+          <Nav
+            onClick={() => {
+              scrollToTop();
+              toggleCheckBurguer();
+            }}
+            isOpen={isMenuOpen}
+          >
+            Início
+          </Nav>
 
-          <UlContainer isOpen={isMenuOpen}>
-            <Li>
-              <Nav onClick={scrollToTop}>Início</Nav>
-            </Li>
-            <Li>
-              <Nav href="#sobre" onClick={toggleMenu}>
-                Sobre mim
-              </Nav>
-            </Li>
-            <Li>
-              <Nav href="#projetos" onClick={toggleMenu}>
-                Projetos
-              </Nav>
-            </Li>
-            <Li>
-              <Nav href="#contato" onClick={toggleMenu}>
-                Contato
-              </Nav>
-            </Li>
-          </UlContainer>
+          <Nav
+            href="#sobre"
+            onClick={() => toggleCheckBurguer}
+            isOpen={isMenuOpen}
+          >
+            Sobre mim
+          </Nav>
 
+          <Nav
+            href="#projetos"
+            onClick={() => toggleCheckBurguer}
+            isOpen={isMenuOpen}
+          >
+            Projetos
+          </Nav>
+
+          <Nav
+            href="#contato"
+            onClick={() => toggleCheckBurguer}
+            isOpen={isMenuOpen}
+          >
+            Contato
+          </Nav>
+        </UlContainer>
       </MenuContainer>
     </Container>
   );

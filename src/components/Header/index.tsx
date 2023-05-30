@@ -5,7 +5,7 @@ import {
   StyledSvg,
   FixedContainer,
   StyledSg,
-  StyledMenuDiv
+  StyledMenuDiv,
 } from "../../styles/components/Header/styles";
 import portfolioSVG from "../../assets/svgs/portfolio-my-profile-browser-svgrepo-com.svg";
 import MenuHmburguer from "../../../public/menus.png";
@@ -14,34 +14,54 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import PortfolioContext from "@/context/PortfolioContext";
 import ThemeButton from "../ThemeButton";
-
+import MenuHamburguer from "../MenuHamburguer";
 
 export default function Header() {
   const router = useRouter();
 
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [hidden, setHidden] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
-  const { isMenuOpen, toggleMenu, appTheme, toggleTheme } = useContext(PortfolioContext);
+  const {
+    isMenuOpen,
+    toggleMenu,
+    appTheme,
+    toggleTheme,
+    toggleCheckBurguer,
+    isChecked,
+    toggleHamburguer,
+  } = useContext(PortfolioContext);
+
+  const handleHeaderScroll = () => {
+    const currentScrollTop = window.pageYOffset;
+
+    if (currentScrollTop <= lastScrollTop) {
+      setHidden(false);
+    } else {
+      setHidden(true);
+
+      if (isMenuOpen && scrollY > 0) {
+        toggleMenu();
+        toggleCheckBurguer();
+      }
+    }
+
+    setLastScrollTop(currentScrollTop);
+  };
 
   useEffect(() => {
+    handleHeaderScroll();
     const handleScroll = () => {
-      const currentScrollTop = window.pageYOffset;
-
-      if (currentScrollTop <= lastScrollTop) {
-        setHidden(false);
-      } else {
-        setHidden(true);
-      }
-
-      setLastScrollTop(currentScrollTop);
+      setScrollY(window.scrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollTop]);
+  }, [scrollY]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -50,11 +70,11 @@ export default function Header() {
     });
   };
 
-  const handleClick = () => {
-    toggleTheme();
-    console.log('cliquei');
-    console.log(appTheme)
-  };
+  // const handleClick = () => {
+  //   toggleTheme();
+  //   console.log('cliquei');
+  //   console.log(appTheme)
+  // };
 
   return (
     <FixedContainer className={hidden ? "hidden" : ""}>
@@ -67,22 +87,35 @@ export default function Header() {
           onClick={() => router.push("/")}
         />
 
-        <StyledSg
-          src={MenuHmburguer}
-          alt="menu"
-          width={50}
-          height={50}
-          onClick={() => toggleMenu()}
-        />
+        <StyledSg>
+          <MenuHamburguer />
+        </StyledSg>
 
         <HeaderContainer>
-          <Navigation onClick={scrollToTop}>Início</Navigation>
+          <Navigation
+            onClick={() => {
+              if (isMenuOpen) {
+                scrollToTop();
+                toggleCheckBurguer();
+              } else {
+                scrollToTop();
+              }
+            }}
+          >
+            Início
+          </Navigation>
 
-          <Navigation href="#sobre">Sobre mim</Navigation>
+          <Navigation href="#sobre" onClick={toggleCheckBurguer}>
+            Sobre mim
+          </Navigation>
 
-          <Navigation href="#projetos">Projetos</Navigation>
+          <Navigation href="#projetos" onClick={toggleCheckBurguer}>
+            Projetos
+          </Navigation>
 
-          <Navigation href="#contato">Contato</Navigation>
+          <Navigation href="#contato" onClick={toggleCheckBurguer}>
+            Contato
+          </Navigation>
         </HeaderContainer>
         <button type="button">
           <ThemeButton />

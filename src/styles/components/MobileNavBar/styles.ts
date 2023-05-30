@@ -16,28 +16,34 @@ export const MenuContainer = styled.div<{ isOpen: boolean }>`
   flex-direction: column;
   flex-wrap: wrap;
   position: fixed;
-  right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  /* right: ${({ isOpen }) => (isOpen ? '0' : '100')}; */
   top: 120px;
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.4);
-  transition: right 0.4s;
+  transition: 0.4s;
 `;
 
-export const Nav = styled.a`
-  width: 50%;
+export const Nav = styled.a<{ isOpen: boolean }>`
+  width: 100%;
   padding: 10px;
   color: ${(props) => props.theme.editorBlueSky};
   z-index: 9;
   display: flex;
   justify-content: start;
+  /* margin-left: 50%; */
+  background-color: ${(props) => props.theme.editorBackground};
   transition: 0.4s;
+  -webkit-transition: 0.4s;
+  box-shadow: 1px 1px 1px 1px black;
+  border-radius: 5px;
 
   &:hover {
-    color: ${(props) => props.theme.editorLittleSky};
+    color: ${(props) => props.theme.editorBackground};
+    background-color: ${(props) => props.theme.editorTerminalBlue};
   }
 `;
 
-export const UlContainer = styled.ul<{ isOpen: boolean }>`
+export const UlContainer = styled.div<{ isOpen: boolean }>`
   height: 100%;
   width: 50%;
   background-color: ${(props) => props.theme.editorBackground};

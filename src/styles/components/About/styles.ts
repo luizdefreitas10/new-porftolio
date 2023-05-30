@@ -63,6 +63,7 @@ export const ContentContainer = styled.div`
     font-size: 3.5rem;
     color: ${(props) => props.theme.editorKeywords};
     position: relative;
+    text-align: center;
     display: flex;
     /* background-color: green; */
 

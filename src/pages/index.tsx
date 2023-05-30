@@ -39,13 +39,13 @@ export default function Home() {
         <div data-aos='fade-right' data-aos-duration='2000'>
           <About />
         </div>
-        <DataAosContainer data-aos='fade-left' data-aos-duration='2000'>
-          <AboutMe  />
+        <DataAosContainer data-aos='fade-right' data-aos-duration='2000'>
+          <AboutMe/>
         </DataAosContainer>
         <div data-aos='fade-right' data-aos-duration='2000'>
           <Technologies />
         </div>
-        <ProjectContainer data-aos='fade-left' data-aos-duration='2000'>
+        <ProjectContainer data-aos='fade-right' data-aos-duration='2000'>
           <Projects />
         </ProjectContainer>
         <div data-aos='fade-right' data-aos-duration='2000'>
