@@ -17,7 +17,7 @@ export const MenuContainer = styled.div<{ isOpen: boolean }>`
   flex-wrap: wrap;
   position: fixed;
   /* right: ${({ isOpen }) => (isOpen ? '0' : '100')}; */
-  top: 120px;
+  top: 96px;
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.4);
   transition: 0.4s;

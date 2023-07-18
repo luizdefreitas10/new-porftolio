@@ -13,7 +13,7 @@ export default createGlobalStyle`
     html {
       scroll-behavior: smooth;
       margin-top: 6rem;
-      font-size: 1.2rem;
+      font-size: 1rem;
       overflow-x: hidden;
 
   }
